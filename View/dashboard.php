@@ -58,7 +58,6 @@
 <body>
 	<div id="container" style= "margin-top: 10%";>
 		<h1 class="navbar navbar-dark bg-dark">Gerenciar</h1>
-		<h3>Testando</h3>
 		<button  type="button" class="btn btn-primary" ><a href="cadasLab.php?classe=laboratorio&metodo=create">Cadastrar Laboratórios</a></button>
 
 		<button  type="button" class="btn btn-primary"><a href="listarLab.php?classe=laboratorio&metodo=index">Visualizar Laboratórios</a></button>
