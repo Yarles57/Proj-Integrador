@@ -25,7 +25,8 @@
             <tr>
               <th scope="col">Nome</th>     
               <th scope="col">Código</th>
-              <th scope="col">Qtd. computadores</th>     
+              <th scope="col">Qtd. computadores</th> 
+              <th colspan="2">Ação</th>    
             </tr>
         </thead>
        <?php
