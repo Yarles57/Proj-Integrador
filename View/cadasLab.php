@@ -3,7 +3,6 @@
 <head>
 	<title>Cadastrar Laboratório</title>
 	<meta charset="utf-8">
-	<!--<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">-->
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
 	 <style type="text/css">
     *{
@@ -26,9 +25,10 @@
       font-weight: lighter;
     }
   </style>
+
 </head>
 <body>
-<div id="container" style= "margin-top: 10%";>
+	<div id="container" style= "margin-top: 10%";>
 		<h1 class="navbar navbar-dark bg-dark">Cadastrar Laboratório</h1>
 		<form action="../index.php" method="post">
 
