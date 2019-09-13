@@ -64,13 +64,13 @@
 			$codigoLaboratorio = $laboratorio->getCodLab();
 			$qtd = 	$laboratorio->getQtdComputadores();
 
-			$query = "UPDATE laboratorio SET nomeLab=?, codLab=?, qtdcompLab=? WHERE idLab=18";
+			$query = "UPDATE laboratorio SET nomeLab=?, codLab=?, qtdcompLab=? WHERE idLab=?";
 
     		$stmt = $pdo->prepare($query);
     		$stmt->bindParam(1, $nomeLaboratorio);
     		$stmt->bindParam(2, $codigoLaboratorio);
     		$stmt->bindParam(3, $qtd);
-    		//$stmt->bindParam(4, $idLaboratorio);
+    		$stmt->bindParam(4, $idLaboratorio);
     		
     		echo $nomeLaboratorio;
     		echo $codigoLaboratorio;
