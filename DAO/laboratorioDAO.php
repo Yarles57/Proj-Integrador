@@ -28,7 +28,7 @@
 
 			$labId = $_GET['id'];
 			$pdo = Database::conexao();
-			$result = $pdo->query("SELECT * FROM laboratorio WHERE id='$labId'");
+			$result = $pdo->query("SELECT * FROM laboratorio WHERE idLab='$labId'");
 			$linha = $result->fetchAll(PDO::FETCH_ASSOC);
 
 			return $linha;
@@ -55,15 +55,12 @@
 		}
 
 		public function atualizar($laboratorio){
-
-			$labId = $_GET['id'];
-
-			$pdo = Database::conexao();
+			$pdo = Database::conexao();			
 
 			$idlaboratorio = $laboratorio->getIdLab();
 			$nomelaboratorio = $laboratorio->getNomeLab();
 			$codigoLaboratorio = $laboratorio->getCodLab();
-			$qtdcompLab = $laboratorio->getQtdComputadores();
+			$qtd = $laboratorio->getQtdComputadores();
 			
 
 			$query = "UPDATE laboratorio SET nomeLab=?, codLab=?, 
@@ -72,7 +69,7 @@
     		$stmt = $pdo->prepare($query);
     		$stmt->bindParam(1, $nomelaboratorio);
     		$stmt->bindParam(2, $codigoLaboratorio);
-    		$stmt->bindParam(3, $qtdcompLab);
+    		$stmt->bindParam(3, $qtd);
     		$stmt->bindParam(5, $idlaboratorio);
     		$ok = $stmt->execute();
 
@@ -81,7 +78,7 @@
 
 		public function deleta($id){
 
-
+			$labId = $_GET['id'];
 			$pdo = Database::conexao();
 			$query = ("DELETE FROM laboratorio WHERE id=?");
 			$stmt = $pdo->prepare($query);
