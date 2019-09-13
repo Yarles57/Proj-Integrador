@@ -58,7 +58,7 @@
           <label>Qtd. Computadores: 
           <input type="text" class="form-control" name="qtdcomp" value="<?php echo "$qtd";?>"></label><br />
               
-        <input type="hidden" name="idLab" value="<?php echo "$id";?>">
+        <input type="hidden" name="id" value="<?php echo "$idLab";?>">
         <input type="hidden" name="metodo" value="update">
         <input type="hidden"  name="classe" value="laboratorio">
 
