@@ -1,21 +1,19 @@
 <?php
   require_once "../Model/labModel.php";
   session_start();
-  $linha = $_SESSION['editaLab'];
+  $lab = $_SESSION['editaLab'];
 
-  foreach($linha as $aux){
+  foreach($lab as $aux){
     $idLaboratorio = $aux['idLab'];
     $nomeLaboratorio = $aux['nomeLab'];
     $codigoLaboratorio = $aux['codLab'];
-    $qtdCompLab = $aux['qtdcompLab'];
-    
+    $qtd = $aux['qtdcompLab'];
   } 
 
 ?>
 
 <!DOCTYPE html>
 <html lang="PT-BR">
-
   <head>
     <meta charset="UTF-8"/>
     <title>Editar Laboratório</title>
@@ -44,12 +42,10 @@
       font-weight: lighter;
     }
   </style>
-
   </head>
 
   <body>
-
-  <div id="container" style= "margin-top: 10%";>
+    <div id="container" style= "margin-top: 10%";>
       <h1 class="navbar navbar-dark bg-dark">Alterar dados do Laboratório</h1>
       <form method="post" action="../index.php">
 
