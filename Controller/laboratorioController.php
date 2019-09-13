@@ -73,7 +73,7 @@
 
 			$this->laboratorioDAO->deleta($id);
 
-			header("Location: ./dashboard.php");
+			header("Location: ../dashboard.php");
 		}
 
 		public function show($id){
