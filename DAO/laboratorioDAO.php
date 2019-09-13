@@ -66,7 +66,7 @@
 
 			$query ="UPDATE laboratorio SET 
 			nomelaboratorio=:nomelaboratorio, codigoLaboratorio=:codigoLaboratorio, 
-			qtd=:qtd WHERE id =". $laboratorio->getId();
+			qtd=:qtd WHERE id =". $laboratorio->getIdLab();
 			
 			
 
@@ -74,11 +74,11 @@
     		$stmt->bindParam(1, $nomelaboratorio);
     		$stmt->bindParam(2, $codigoLaboratorio);
     		$stmt->bindParam(3, $qtd);
-    		$stmt->bindParam(4, $laboratorio->getId());
+    		$stmt->bindParam(4, $laboratorio->getIdLab());
     		
     		$ok = $stmt->execute();
 
-    		header("Location: View/dashboard.php");
+    		header("Location: View/listarLab.php");
 		}
 
 
