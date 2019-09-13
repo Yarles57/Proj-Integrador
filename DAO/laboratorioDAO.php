@@ -54,6 +54,9 @@
     		header("Location: View/dashboard.php");
 		}
 
+
+
+
 		public function atualizar($laboratorio){
 			$pdo = Database::conexao();			
 
@@ -63,8 +66,7 @@
 			$qtd = $laboratorio->getQtdComputadores();
 			
 
-			$query = "UPDATE laboratorio SET nomeLab=?, codLab=?, 
-			qtdcompLab=? WHERE id=?";
+			$query = "UPDATE laboratorio SET nomeLab=?, codLab=?, qtdcompLab=? WHERE id=?";
 
     		$stmt = $pdo->prepare($query);
     		$stmt->bindParam(1, $nomelaboratorio);
@@ -76,10 +78,11 @@
     		header("Location: View/listarLab.php");
 		}
 
-		public function deleta($id){
 
-			$labId = $_GET['id'];
+		public function deleta($id){
 			$pdo = Database::conexao();
+			$labId = $_GET['id'];
+			
 			$query = ("DELETE FROM laboratorio WHERE id=?");
 			$stmt = $pdo->prepare($query);
     		$stmt->bindParam(1, $id);
