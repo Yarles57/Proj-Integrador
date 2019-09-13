@@ -65,8 +65,8 @@
 			$qtd = $laboratorio->getQtdComputadores();
 
 			$query ="UPDATE laboratorio SET 
-			nomelaboratorio=:nomelaboratorio, codigoLaboratorio=:codigoLaboratorio, 
-			qtd=:qtd WHERE id =". $laboratorio->getIdLab();
+			nomelaboratorio=?, codigoLaboratorio=?, 
+			qtd=? WHERE id = ?";
 			
 			
 
