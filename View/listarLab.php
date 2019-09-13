@@ -1,7 +1,8 @@
 <?php
   require_once "../Model/labModel.php";
   session_start();
-  $lab = $_SESSION['laboratorios'];  
+
+  $lab = $_SESSION['laboratorios'];
 ?>
 
 <!DOCTYPE html>
