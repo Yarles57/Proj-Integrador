@@ -57,7 +57,7 @@
 
 
 
-		public function editarLaboratorio($laboratorio){
+		public function atualizar($laboratorio){
 			$pdo = Database::conexao();			
 
 			$idlaboratorio = $laboratorio->getIdLab();
