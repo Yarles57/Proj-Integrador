@@ -26,7 +26,7 @@
 		
 		public function listaRegistro($id){
 
-			$labId = $id;
+			$labId = $_GET['id'];
 			$pdo = Database::conexao();
 			$result = $pdo->query("SELECT * FROM laboratorio WHERE id='$labId'");
 			$linha = $result->fetchAll(PDO::FETCH_ASSOC);
@@ -55,6 +55,9 @@
 		}
 
 		public function atualizar($laboratorio){
+
+			$labId = $_GET['id'];
+
 			$pdo = Database::conexao();
 
 			$idlaboratorio = $laboratorio->getIdLab();
