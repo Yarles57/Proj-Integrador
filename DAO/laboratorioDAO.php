@@ -59,7 +59,7 @@
 
 			$pdo = Database::conexao();			
 
-			$idLaboratorio = $laboratorio->getIdLab();
+			$idLaboratorio = 21;
 			$nomeLaboratorio = $laboratorio->getNomeLab();
 			$codigoLaboratorio = $laboratorio->getCodLab();
 			$qtd = 	$laboratorio->getQtdComputadores();
@@ -71,14 +71,10 @@
     		$stmt->bindParam(2, $codigoLaboratorio);
     		$stmt->bindParam(3, $qtd);
     		$stmt->bindParam(4, $idLaboratorio);
-    		
-    		var_dump($idLaboratorio);
 
     		$ok = $stmt->execute();
-
     		header("Location: View/listarLab.php");
 		}
-
 
 			public function deleta($id){
 
