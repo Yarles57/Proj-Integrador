@@ -72,10 +72,7 @@
     		$stmt->bindParam(3, $qtd);
     		$stmt->bindParam(4, $idLaboratorio);
     		
-    		echo $nomeLaboratorio;
-    		echo $codigoLaboratorio;
-    		echo $qtd;
-    		echo $idLaboratorio;
+    		var_dump($idLaboratorio);
 
     		$ok = $stmt->execute();
 
