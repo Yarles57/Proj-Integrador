@@ -29,7 +29,11 @@
        <?php
           foreach($lab as $aux){
             echo "<tr>";
-            echo "<td><a href='../index.php?classe=laboratorio&metodo=show&id=".$aux->getIdLab()."''>{$aux->getNomeLab()}</a></td>";
+            echo "<td>{$aux->getNomeLab()}</td>";
+
+            echo "<td>{$aux->getCodLab()}</td>";
+
+            echo "<td>{$aux->getQtdComputadores()}</td>";
            
                 
             echo '<td><a href="../index.php?classe=laboratorio&metodo=edit&id='.$aux->getIdLab().'">Editar</a></td>';          
