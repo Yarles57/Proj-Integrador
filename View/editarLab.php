@@ -49,7 +49,7 @@
 
   <body>
 
-      <div id="container" style= "margin-top: 10%";>
+  <div id="container" style= "margin-top: 10%";>
       <h1 class="navbar navbar-dark bg-dark">Alterar dados do Laboratório</h1>
       <form method="post" action="../index.php">
 
