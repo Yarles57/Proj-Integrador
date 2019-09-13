@@ -47,23 +47,23 @@
 			session_start();
 			$_SESSION['editaLab'] = $lab;
 
-
 			header("Location: View/editarLab.php");
 		}
 
 		public function update(){
 
-			//recebe os novos dados do editarFornecedor.php da View, chama o metodo atualizar do fornecedorDAO passando no parametro o objeto fornecedor, para que os dados sejam substituidos no banco
-			$idLaboratorio = $_POST['idLab'];
+			//recebe os novos dados do editarLab.php da View, chama o metodo atualizar do laboratorioDAO passando no parametro o objeto laboratório, para que os dados sejam substituidos no banco
+
+			$idLaboratorio = $_POST['id'];
 			$nomeLaboratorio = $_POST['nomeLab'];
 	        $codigoLaboratorio = $_POST['codLab'];
-	        $qtdCompLab = $_POST['qtdcompLab'];
+	        $qtd = $_POST['qtdcompLab'];
 	      
 
 	        $this->laboratorio->setIdLab($idLaboratorio);
 	        $this->laboratorio->setNomeLab($nomeLaboratorio);
 	        $this->laboratorio->setCodLab($codigoLaboratorio);
-	        $this->laboratorio->setQtdComputadores($qtdcompLab);
+	        $this->laboratorio->setQtdComputadores($qtd);
 
 	        $this->laboratorioDAO->atualizar($this->laboratorio);
 		}
