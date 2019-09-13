@@ -1,7 +1,7 @@
 <?php
   require_once "../Model/labModel.php";
   session_start();
-  $lab = $_SESSION['editaLab'];
+  $lab = $_SESSION['editarLab'];
 
   foreach($lab as $aux){
     $idLaboratorio = $aux['idLab'];
