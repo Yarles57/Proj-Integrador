@@ -57,15 +57,16 @@
 
 
 
-		public function atualizar($laboratorio){
+		public function editarLaboratorio($laboratorio){
 			$pdo = Database::conexao();			
 
 			$idlaboratorio = $laboratorio->getIdLab();
 			$nomelaboratorio = $laboratorio->getNomeLab();
 			$codigoLaboratorio = $laboratorio->getCodLab();
 			$qtd = $laboratorio->getQtdComputadores();
-			
 
+			$query ="UPDATE clientes SET nome=:nome, endereco=:endereco, cpf=:cpf, contato=:contato WHERE id =". $cliente->getId();
+			
 			$query = "UPDATE laboratorio SET nomeLab=?, codLab=?, qtdcompLab=? WHERE id=?";
 
     		$stmt = $pdo->prepare($query);
@@ -73,9 +74,10 @@
     		$stmt->bindParam(2, $codigoLaboratorio);
     		$stmt->bindParam(3, $qtd);
     		$stmt->bindParam(4, $idlaboratorio);
+    		
     		$ok = $stmt->execute();
 
-    		header("Location: View/listarLab.php");
+    		header("Location: View/dashboard.php");
 		}
 
 
