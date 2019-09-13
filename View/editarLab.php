@@ -47,7 +47,7 @@
   <body>
     <div id="container" style= "margin-top: 10%";>
       <h1 class="navbar navbar-dark bg-dark">Alterar dados do Laboratório</h1>
-      <form method="post" action="../index.php">
+      <form method="post" action="listarLab.php">
 
           <label>Nome:
           <input type="text"  class="form-control" name="nomeLab" value= "<?php echo "$nomeLaboratorio";?>" /></label><br />
