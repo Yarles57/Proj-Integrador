@@ -16,7 +16,7 @@
 
   <body>
 
-  <div class="container">
+    <div class="container">
       <h3>Lista de Laboratórios</h3>
       
       <table border="1" class="table">
@@ -46,7 +46,6 @@
      <a href="../index.php?classe=laboratorio&metodo=create">Adicionar</a>
       
     </div>
-
 
   </body>
 
