@@ -64,9 +64,9 @@
 			$codigoLaboratorio = $laboratorio->getCodLab();
 			$qtd = $laboratorio->getQtdComputadores();
 
-			$query ="UPDATE clientes SET 
-			nome=:nome, endereco=:endereco, 
-			cpf=:cpf, contato=:contato WHERE id =". $laboratorio->getId();
+			$query ="UPDATE laboratorio SET 
+			nomelaboratorio=:nomelaboratorio, codigoLaboratorio=:codigoLaboratorio, 
+			qtd=:qtd WHERE id =". $laboratorio->getId();
 			
 			
 
