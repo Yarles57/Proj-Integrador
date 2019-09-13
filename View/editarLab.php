@@ -50,15 +50,15 @@
       <form method="post" action="../index.php">
 
           <label>Nome:
-          <input type="text"  class="form-control" name="nome" value= "<?php echo "$nomeLaboratorio";?>" /></label><br />
+          <input type="text"  class="form-control" name="nomeLab" value= "<?php echo "$nomeLaboratorio";?>" /></label><br />
        
           <label>Código: 
-          <input type="text"  class="form-control" name="endereco" value="<?php echo "$codigoLaboratorio";?>"></label><br />
+          <input type="text"  class="form-control" name="codLab" value="<?php echo "$codigoLaboratorio";?>"></label><br />
        
           <label>Qtd. Computadores: 
-          <input type="text" class="form-control" name="telefone" value="<?php echo "$qtd";?>"></label><br />
+          <input type="text" class="form-control" name="qtdcompLab" value="<?php echo "$qtd";?>"></label><br />
               
-        <input type="hidden" name="labId" value="<?php echo "$id";?>">
+        <input type="hidden" name="id" value="<?php echo "$id";?>">
         <input type="hidden" name="metodo" value="update">
         <input type="hidden"  name="classe" value="laboratorio">
 
