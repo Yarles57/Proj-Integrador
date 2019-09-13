@@ -16,7 +16,7 @@
 			$lab = $this->laboratorioDAO->listarTudo();
 			session_start();
 			$_SESSION['laboratorios'] = $lab;
-			header('Location: View/listarLab.php');
+			header('Location: View/dashboard.php');
         }
 
         public function create(){
