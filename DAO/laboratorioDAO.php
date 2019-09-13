@@ -54,7 +54,7 @@
     		header("Location: View/dashboard.php");
 		}
 
-		public function edit($laboratorio){
+		public function atualizar($laboratorio){
 			$pdo = Database::conexao();			
 
 			$idlaboratorio = $laboratorio->getIdLab();
