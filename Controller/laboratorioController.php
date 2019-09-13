@@ -41,7 +41,7 @@
 		}
 
 		public function edit($id){
-			//atraves do ID seleciona os dados do registro e envia pela SESSION para o editarFornecedores.php da View
+			//atraves do ID seleciona os dados do registro e envia pela SESSION para o editarLab.php da View
 
 			$lab = $this->laboratorioDAO->listaRegistro($id);
 			session_start();
@@ -78,7 +78,7 @@
 
 		public function show($id){
 
-			$forne = $this->laboratorioDAO->listaRegistro($id);
+			$lab = $this->laboratorioDAO->listaRegistro($id);
 			session_start();
 			$_SESSION['showLab'] = $lab;
 			header("Location: View/showLab.php");
