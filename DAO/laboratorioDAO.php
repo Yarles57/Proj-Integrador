@@ -54,10 +54,7 @@
     		header("Location: View/dashboard.php");
 		}
 
-
-
-
-		public function editarLaboratorio($laboratorio){
+		public function edit($laboratorio){
 			$pdo = Database::conexao();			
 
 			$idlaboratorio = $laboratorio->getIdLab();
@@ -65,15 +62,17 @@
 			$codigoLaboratorio = $laboratorio->getCodLab();
 			$qtd = $laboratorio->getQtdComputadores();
 
-			$query ="UPDATE clientes SET nome=:nome, endereco=:endereco, cpf=:cpf, contato=:contato WHERE id =". $cliente->getId();
+			$query ="UPDATE clientes SET 
+			nome=:nome, endereco=:endereco, 
+			cpf=:cpf, contato=:contato WHERE id =". $laboratorio->getId();
 			
-			$query = "UPDATE laboratorio SET nomeLab=?, codLab=?, qtdcompLab=? WHERE id=?";
+			
 
     		$stmt = $pdo->prepare($query);
     		$stmt->bindParam(1, $nomelaboratorio);
     		$stmt->bindParam(2, $codigoLaboratorio);
     		$stmt->bindParam(3, $qtd);
-    		$stmt->bindParam(4, $idlaboratorio);
+    		$stmt->bindParam(4, $laboratorio->getId());
     		
     		$ok = $stmt->execute();
 
