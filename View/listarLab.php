@@ -10,50 +10,43 @@
   <head>
     <meta charset="UTF-8"/>
     <title></title>
+
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
   </head>
 
   <body>
 
-    <div class="container">
-      <h3>Lista </h3>
+  <div class="container">
+      <h3>Lista de Laboratórios</h3>
       
-      <table border="1">
-        <tr>
-          <td><strong></strong></td>
-          
-        </tr>
-       <!-- <?php
+      <table border="1" class="table">
+        <thead class="thead-dark">
+            <tr>
+              <th scope="col">Nome</th>          
+            </tr>
+        </thead>
+       <?php
           foreach($lab as $aux){
             echo "<tr>";
-            echo "<td><a href='../autenticar.php?classe=laboratorio&metodo=show&laboratorioId=".$aux->getIdLab()."''>{$aux->getNomeLab()}</a></td>";
+            echo "<td><a href='../index.php?classe=laboratorio&metodo=show&id=".$aux->getIdLab()."''>{$aux->getNomeLab()}</a></td>";
            
-            
+                
+            echo '<td><a href="../index.php?classe=laboratorio&metodo=edit&id='.$aux->getIdLab().'">Editar</a></td>';          
 
-           //esses href passa para o index via GET os valores da classe e metodo juntamente com o ID do registro escolhido
-
-            //echo '<td>Mostrar +</td>';
-
-            echo '<td><a href="../autenticar.php?classe=laboratorio&metodo=edit&laboratorioId='.$aux->getIdLab().'">Editar</a></td>';          
-
-            echo '<td><a href="../autenticar.php?classe=laboratorio&metodo=delete&laboratorioId='.$aux->getIdLab().'">Deletar</a></td>';
+            echo '<td><a href="../index.php?classe=laboratorio&metodo=delete&id='.$aux->getIdLab().'">Deletar</a></td>';
             echo "</tr>";
-
             
-          }
-        ?>-->
-
-        <?php 
-          foreach ($lab as $key => $value) {
-            $value->getNomeLab();
           }
         ?>
+
       </table>
 
       <br>
 
-     <!-- <a href="../index.php?classe=fornecedor&metodo=create">Adicionar</a>-->
+     <a href="../index.php?classe=laboratorio&metodo=create">Adicionar</a>
       
     </div>
+
 
   </body>
 
