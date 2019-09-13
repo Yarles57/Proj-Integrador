@@ -59,22 +59,18 @@
 
 			$pdo = Database::conexao();			
 
-			$idlaboratorio = $laboratorio->getIdLab();
-			$nomelaboratorio = $laboratorio->getNomeLab();
+			$idLaboratorio = $laboratorio->getIdLab();
+			$nomeLaboratorio = $laboratorio->getNomeLab();
 			$codigoLaboratorio = $laboratorio->getCodLab();
 			$qtd = $laboratorio->getQtdComputadores();
 
-			$query ="UPDATE laboratorio SET 
-			nomelaboratorio=?, codigoLaboratorio=?, 
-			qtd=? WHERE id = ?";
-			
-			
+			$query = "UPDATE laboratorio SET nomeLab=?, codLab=?, qtdcompLab=? WHERE id=?";
 
     		$stmt = $pdo->prepare($query);
-    		$stmt->bindParam(1, $nomelaboratorio);
+    		$stmt->bindParam(1, $nomeLaboratorio);
     		$stmt->bindParam(2, $codigoLaboratorio);
     		$stmt->bindParam(3, $qtd);
-    		$stmt->bindParam(4, $laboratorio->getIdLab());
+    		$stmt->bindParam(4, $idLaboratorio);
     		
     		$ok = $stmt->execute();
 
@@ -82,14 +78,14 @@
 		}
 
 
-		public function deleta($id){
+			public function deleta($id){
+
 			$pdo = Database::conexao();
-			$labId = $_GET['id'];
-			
 			$query = ("DELETE FROM laboratorio WHERE id=?");
 			$stmt = $pdo->prepare($query);
     		$stmt->bindParam(1, $id);
     		$ok = $stmt->execute();
+
     		
 		}
 	}
