@@ -1,8 +1,11 @@
 <?php
   require_once "../Model/labModel.php";
   session_start();
+
   $lab = $_SESSION['laboratorios']; 
  
+ $lab = $_SESSION['laboratorios'];
+
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +26,10 @@
       <table border="1" class="table">
         <thead class="thead-dark">
             <tr>
-              <th scope="col">Nome</th>          
+              <th scope="col">Nome</th>     
+              <th scope="col">Código</th>
+              <th scope="col">Qtd. computadores</th> 
+              <th colspan="2">Ação</th>    
             </tr>
         </thead>
        <?php
