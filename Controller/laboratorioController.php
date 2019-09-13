@@ -45,7 +45,7 @@
 
 			$lab = $this->laboratorioDAO->listaRegistro($id);
 			session_start();
-			$_SESSION['editaLab'] = $lab;
+			$_SESSION['editarLab'] = $lab;
 
 			header("Location: View/editarLab.php");
 		}
