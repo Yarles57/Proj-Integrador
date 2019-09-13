@@ -23,7 +23,9 @@
       <table border="1" class="table">
         <thead class="thead-dark">
             <tr>
-              <th scope="col">Nome</th>          
+              <th scope="col">Nome</th>     
+              <th scope="col">Código</th>
+              <th scope="col">Qtd. computadores</th>     
             </tr>
         </thead>
        <?php
