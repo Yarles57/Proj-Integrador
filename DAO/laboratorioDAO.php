@@ -70,10 +70,10 @@
     		$stmt->bindParam(1, $nomelaboratorio);
     		$stmt->bindParam(2, $codigoLaboratorio);
     		$stmt->bindParam(3, $qtd);
-    		$stmt->bindParam(5, $idlaboratorio);
+    		$stmt->bindParam(4, $idlaboratorio);
     		$ok = $stmt->execute();
 
-    		header("Location: dashboard.php");
+    		header("Location: View/listarLab.php");
 		}
 
 		public function deleta($id){
