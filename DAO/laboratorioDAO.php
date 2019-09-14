@@ -59,7 +59,7 @@
 
 			$pdo = Database::conexao();			
 
-			$idLaboratorio = 21;
+			$idLaboratorio = $laboratorio->getIdLab();
 			$nomeLaboratorio = $laboratorio->getNomeLab();
 			$codigoLaboratorio = $laboratorio->getCodLab();
 			$qtd = 	$laboratorio->getQtdComputadores();
@@ -72,6 +72,7 @@
     		$stmt->bindParam(3, $qtd);
     		$stmt->bindParam(4, $idLaboratorio);
 
+    		
     		$ok = $stmt->execute();
     		header("Location: View/listarLab.php");
 		}
