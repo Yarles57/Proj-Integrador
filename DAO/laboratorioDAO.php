@@ -64,14 +64,14 @@
 			$codigoLaboratorio = $laboratorio->getCodLab();
 			$qtd = $laboratorio->getQtdComputadores();
 
-			$query = "UPDATE laboratorio SET nomeLab=?, codLab=?, qtdcompLab=? WHERE id=?";
+			$query = "UPDATE laboratorio SET nomeLab=:nomeLab, codLab=:codLab, qtdcompLab=:qtdcompLab WHERE id =". $laboratorio->getIdLab();
+
+			$stmt->bindParam(':nome', $cliente->getNome());
 
     		$stmt = $pdo->prepare($query);
-    		$stmt->bindParam(1, $nomeLaboratorio);
-    		$stmt->bindParam(2, $codigoLaboratorio);
-    		$stmt->bindParam(3, $qtd);
-    		$stmt->bindParam(4, $idLaboratorio);
-    		
+    		$stmt->bindParam(':nomeLab', $laboratorio->getNomeLab());
+    		$stmt->bindParam('codLab', $laboratorio->getCodLab());
+    		$stmt->bindParam('qtdcompLab', getQtdComputadores());    		
     		$ok = $stmt->execute();
 
     		header("Location: View/listarLab.php");
