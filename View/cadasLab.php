@@ -24,6 +24,7 @@
       font-size: 1.8em;
       font-weight: lighter;
     }
+
   </style>
 
 </head>
@@ -32,12 +33,19 @@
 		<h1 class="navbar navbar-dark bg-dark">Cadastrar Laboratório</h1>
 		<form action="../index.php" method="post">
 
-			<label>Nome: <input type="text" class="form-control" name="nomeLab" required="on"></label><br />
-			<label>Código: <input type="text" class="form-control" name="codeLab" maxlength="6" required="on"></label><br />
-			<label>Qtd. Computadores: <input type="number" min="1" class="form-control" name="qtdComputadores" required="on"></label><br />
+			<label>Nome: 
+        <input type="text" class="form-control" name="nomeLab" placeholder="Ex: Laboratório de Redes" required="on" autofocus>
+      </label><br />
+			
+      <label>Código: 
+        <input type="text" class="form-control" name="codeLab" maxlength="6" placeholder="Ex: Lab001" required="on" ></label><br />
+			
+      <label>Qtd. Computadores: 
+        <input type="number" min="1" max="30" class="form-control" name="qtdComputadores" placeholder="Ex: 20" required="on" >
+      </label><br />
 
 			<input type="hidden" name="metodo" value="store">
-	        <input type="hidden"  name="classe" value="laboratorio">
+	    <input type="hidden"  name="classe" value="laboratorio">
 
 			<input type="submit" value="Salvar" class="btn btn-primary">
 
