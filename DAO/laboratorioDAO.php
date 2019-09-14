@@ -38,7 +38,6 @@
 			$nomeLaboratorio = $laboratorio->getNomeLab();
 			$codigoLaboratorio = $laboratorio->getCodLab();
 			$qtdComputadoresLab = $laboratorio->getQtdComputadores();
-			
 
 			$query = "INSERT INTO laboratorio (nomeLab, codLab, qtdcompLab) VALUES (?,?,?)";
 
@@ -51,7 +50,6 @@
 
     		header("Location: View/dashboard.php");
 		}
-
 
 		public function atualizar($laboratorio){
 
@@ -69,7 +67,6 @@
     		$stmt->bindParam(2, $codigoLaboratorio);
     		$stmt->bindParam(3, $qtd);
     		$stmt->bindParam(4, $idLaboratorio);
-
     		
     		$ok = $stmt->execute();
     		header("Location: View/listarLab.php");
@@ -83,7 +80,6 @@
     		$stmt->bindParam(1, $id);
     		$ok = $stmt->execute();
 
-    		
 		}
 	}
 	
