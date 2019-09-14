@@ -54,7 +54,7 @@
 
 			//recebe os novos dados do editarLab.php da View, chama o metodo atualizar do laboratorioDAO passando no parametro o objeto laboratório, para que os dados sejam substituidos no banco
 
-			$idLaboratorio = $_POST['idLab'];
+			$idLaboratorio = $_POST['id'];
 			$nomeLaboratorio = $_POST['nomeLaboratorio'];
 	        $codigoLaboratorio = $_POST['codigoLab'];
 	        $qtd = $_POST['qtdcomp'];
