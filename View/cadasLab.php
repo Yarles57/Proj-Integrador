@@ -33,7 +33,7 @@
 		<form action="../index.php" method="post">
 
 			<label>Nome: <input type="text" class="form-control" name="nomeLab" required="on"></label><br />
-			<label>Código: <input type="text" class="form-control" name="codeLab" required="on"></label><br />
+			<label>Código: <input type="text" class="form-control" name="codeLab" maxlength="6" required="on"></label><br />
 			<label>Qtd. Computadores: <input type="number" min="1" class="form-control" name="qtdComputadores" required="on"></label><br />
 
 			<input type="hidden" name="metodo" value="store">
