@@ -11,18 +11,16 @@
 			$linhas = $result->fetchAll(PDO::FETCH_ASSOC);
 			
 			for($i = 0; $i<count($linhas); $i++){
-
 				$laboratorio[$i] = new Laboratorio;
 
 				$laboratorio[$i]->setIdLab($linhas[$i]['idLab']);
-				$laboratorio[$i]->setCodLab($linhas[$i]['codLab']);
 				$laboratorio[$i]->setNomeLab($linhas[$i]['nomeLab']);
 				$laboratorio[$i]->setQtdComputadores($linhas[$i]['qtdcompLab']);
+				$laboratorio[$i]->setCodLab($linhas[$i]['codLab']);
+			
 			}	
-
 	  		return $laboratorio;
 		}
-
 		
 		public function listaRegistro($id){
 
