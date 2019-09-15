@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html lang="PT-BR">
 <head>
-  <title>Cadastrar Laboratório</title>
+  <title>Editar Laboratório</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -59,6 +59,8 @@
         </div>
       </li>
     </ul>
+
+    
 
     <!-- Navbar -->
 
@@ -133,12 +135,12 @@
           <li class="breadcrumb-item">
             <a href="dashboard.php">Painel de Controle</a>
           </li>
-          <li class="breadcrumb-item active">Cadastrar Laboratório</li>
+          <li class="breadcrumb-item active">Editar Laboratório</li>
         </ol>
 
     <div class="container">
       <div class="card card-register mx-auto mt-5">
-        <div class="card-header">Cadastrar Laboratório</div>
+        <div class="card-header">Editar Laboratório</div>
       <div class="card-body">
 
         <form action="../index.php" method="post">
