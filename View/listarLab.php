@@ -42,16 +42,11 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="dashboard.php">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Painel de Controle</span>
-        </a>
-      </li>
       <li class="nav-item dropdown">
+        
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Páginas</span>
+          <span>Ger. Laboratório</span>
         </a>
         
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
@@ -60,13 +55,35 @@
           <a class="dropdown-item" href="cadasLab.php?classe=laboratorio&metodo=create">Cadastrar</a>
           <a class="dropdown-item" href="listarLab.php?classe=laboratorio&metodo=index">Listar</a>
           <div class="dropdown-divider"></div>
+        </div>
+
+      </li>
+
+      <li class="nav-item dropdown">
+        
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Ger. Profrofessor</span>
+        </a>
+        
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
 
           <h6 class="dropdown-header">Gerenciar Professor:</h6>
           <a class="dropdown-item" href="cadasProf.php?classe=professor&metodo=create">Cadastrar</a>
           <a class="dropdown-item" href="listarProf.php?classe=professor&metodo=index">Listar</a>
           <div class="dropdown-divider"></div>
+        </div>
 
+      </li>
 
+      <li class="nav-item dropdown">
+        
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Ger. Reserva</span>
+        </a>
+        
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <h6 class="dropdown-header">Gerenciar Reservas: </h6>
           <a class="dropdown-item" href="cadasRes.php?classe=reserva&metodo=create">Cadastrar</a>
           <a class="dropdown-item" href="listarRes.php?classe=reserva&metodo=index">Listar</a>
@@ -83,7 +100,7 @@
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="#">Painel de Controle</a>
+            <a href="dashboard.php">Painel de Controle</a>
           </li>
           <li class="breadcrumb-item active">Listar Laboratórios</li>
         </ol>
