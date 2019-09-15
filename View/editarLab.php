@@ -146,14 +146,14 @@
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text" id="firstName" class="form-control" placeholder="First name" required="on" autofocus="autofocus" name="nomeLab" value= "<?php echo "$nomeLaboratorio";?>">
+                  <input type="text" id="firstName" class="form-control" placeholder="First name" required="on" autofocus="autofocus" name="nomeLaboratorio" value= "<?php echo "$nomeLaboratorio";?>">
                   <label for="firstName">Nome do Laboratório</label>
                 </div>
                 </div>
               
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input type="text" id="lastName" class="form-control" placeholder="Código do Laboratório" name="codeLab" required="on" value="<?php echo "$codigoLaboratorio";?>" >
+                  <input type="text" id="lastName" class="form-control" placeholder="Código do Laboratório" name="codigoLab" required="on" value="<?php echo "$codigoLaboratorio";?>" >
                   <label for="lastName">Código do Laboratório</label>
                 </div>
               </div>
@@ -161,7 +161,7 @@
           </div>
           <div class="form-group">
             <div class="form-label-group">
-              <input input type="number" min="1" id="inputEmail" class="form-control" placeholder="Quantidade de Computadores" name="qtdComputadores" required="on" value="<?php echo "$qtd";?>">
+              <input input type="number" min="1" id="inputEmail" class="form-control" placeholder="Quantidade de Computadores" name="qtdcomp" required="on" value="<?php echo "$qtd";?>">
               <label for="inputEmail">Quantidade de Computadores</label>
             </div>
           </div>
