@@ -3,45 +3,154 @@
 <head>
 	<title>Cadastrar Laboratório</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
-	 <style type="text/css">
-    *{
-      margin: 0;
-      padding: 0;
-      font-family: Calibri;
-      font-variant: small-caps;
-    }
-    #container{
-      margin-top: 50%;
-      width: 25%;
-      margin: 0 auto;
-      border: 1px solid#3399ff;
-      min-width: 10%;
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    }
-    h1{
-      color: #FFF;
-      font-size: 1.8em;
-      font-weight: lighter;
-    }
-  </style>
+	 <!-- Custom fonts for this template-->
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template-->
+  <link href="../css/sb-admin.css" rel="stylesheet">
 
 </head>
-<body>
-	<div id="container" style= "margin-top: 10%";>
-		<h1 class="navbar navbar-dark bg-dark">Cadastrar Laboratório</h1>
-		<form action="../index.php" method="post">
+<body class="bg-dark">
+  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+    <a class="navbar-brand mr-1" href="dashboard.php"></a>
 
-			<label>Nome: <input type="text" class="form-control" name="nomeLab" required="on"></label><br />
-			<label>Código: <input type="text" class="form-control" name="codeLab" required="on"></label><br />
-			<label>Qtd. Computadores: <input type="number" min="1" class="form-control" name="qtdComputadores" required="on"></label><br />
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="../dashboard.php">
+      <i class="fas fa-bars"></i>
+    </button>
 
-			<input type="hidden" name="metodo" value="store">
+    <!-- Navbar Search -->
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+      <div class="input-group">
+      
+        </div>
+      </div>
+    </form>
+
+    <!-- Navbar -->
+
+  </nav>
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="sidebar navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="dashboard.php">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Painel de Controle</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown">
+        
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Ger. Laboratório</span>
+        </a>
+        
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+         
+          <h6 class="dropdown-header">Gerenciar Laboratório:</h6>
+          <a class="dropdown-item" href="cadasLab.php?classe=laboratorio&metodo=create">Cadastrar</a>
+          <a class="dropdown-item" href="listarLab.php?classe=laboratorio&metodo=index">Listar</a>
+          <div class="dropdown-divider"></div>
+        </div>
+
+      </li>
+
+      <li class="nav-item dropdown">
+        
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Ger. Profrofessor</span>
+        </a>
+        
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+
+          <h6 class="dropdown-header">Gerenciar Professor:</h6>
+          <a class="dropdown-item" href="cadasProf.php?classe=professor&metodo=create">Cadastrar</a>
+          <a class="dropdown-item" href="listarProf.php?classe=professor&metodo=index">Listar</a>
+          <div class="dropdown-divider"></div>
+        </div>
+
+      </li>
+
+      <li class="nav-item dropdown">
+        
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Ger. Reserva</span>
+        </a>
+        
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <h6 class="dropdown-header">Gerenciar Reservas: </h6>
+          <a class="dropdown-item" href="cadasRes.php?classe=reserva&metodo=create">Cadastrar</a>
+          <a class="dropdown-item" href="listarRes.php?classe=reserva&metodo=index">Listar</a>
+        </div>
+
+      </li>
+      
+    </ul>
+
+    <div id="content-wrapper">
+
+      <div class="container-fluid">
+
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="dashboard.php">Painel de Controle</a>
+          </li>
+          <li class="breadcrumb-item active">Cadastrar Laboratório</li>
+        </ol>
+
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header">Cadastrar Laboratório</div>
+      <div class="card-body">
+        <form action="../index.php" method="post">
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="text" id="firstName" class="form-control" placeholder="First name" required="on" autofocus="autofocus" name="nomeLab">
+                  <label for="firstName">Nome do Laboratório</label>
+                </div>
+                </div>
+              
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="text" id="lastName" class="form-control" placeholder="Código do Laboratório" name="codeLab" required="on">
+                  <label for="lastName">Código do Laboratório</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input input type="number" min="1" id="inputEmail" class="form-control" placeholder="Quantidade de Computadores" name="qtdComputadores" required="on">
+              <label for="inputEmail">Quantidade de Computadores</label>
+            </div>
+          </div>
+
+			   <input type="hidden" name="metodo" value="store">
 	        <input type="hidden"  name="classe" value="laboratorio">
 
 			<input type="submit" value="Salvar" class="btn btn-primary">
 
 		</form>
 	</div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+
 </body>
 </html>
