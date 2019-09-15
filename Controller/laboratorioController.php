@@ -54,12 +54,10 @@
 			$nomeLaboratorio = $_POST['nomeLaboratorio'];
 	        $codigoLaboratorio = $_POST['codigoLab'];
 	        $qtd = $_POST['qtdcomp'];
-
 	        $this->laboratorio->setIdLab($idLaboratorio);
 	        $this->laboratorio->setNomeLab($nomeLaboratorio);
 	        $this->laboratorio->setCodLab($codigoLaboratorio);
 	        $this->laboratorio->setQtdComputadores($qtd);
-
 	        $this->laboratorioDAO->atualizar($this->laboratorio);
 		}
 
