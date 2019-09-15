@@ -12,7 +12,6 @@
 		}
 
 		public function index(){
-
 			$lab = $this->laboratorioDAO->listarTudo();
 			session_start();
 			$_SESSION['laboratorios'] = $lab;
@@ -35,8 +34,7 @@
 	        $this->laboratorio->setNomeLab($nomeLaboratorio);
 	        $this->laboratorio->setCodLab($codigoLaboratorio);
 	        $this->laboratorio->setQtdComputadores($qtdCompLab);
-	        
-
+	   
 	        $this->laboratorioDAO->insere($this->laboratorio);
 		}
 
@@ -51,14 +49,11 @@
 		}
 
 		public function update(){
-
 			//recebe os novos dados do editarLab.php da View, chama o metodo atualizar do laboratorioDAO passando no parametro o objeto laboratório, para que os dados sejam substituidos no banco
-
 			$idLaboratorio = $_POST['id'];
 			$nomeLaboratorio = $_POST['nomeLaboratorio'];
 	        $codigoLaboratorio = $_POST['codigoLab'];
 	        $qtd = $_POST['qtdcomp'];
-	      
 
 	        $this->laboratorio->setIdLab($idLaboratorio);
 	        $this->laboratorio->setNomeLab($nomeLaboratorio);
@@ -69,19 +64,14 @@
 		}
 
 		public function delete($id){
-
-
 			$this->laboratorioDAO->deleta($id);
-
-			header("Location: ../dashboard.php");
+			header("Location: View/dashboard.php");
 		}
 
 		public function show($id){
-
 			$lab = $this->laboratorioDAO->listaRegistro($id);
 			session_start();
 			$_SESSION['showLab'] = $lab;
 			header("Location: View/showLab.php");
 		}
-
 	}

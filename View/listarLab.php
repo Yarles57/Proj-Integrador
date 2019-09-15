@@ -18,6 +18,17 @@
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
+  session_start();
+  $lab = $_SESSION['laboratorios'];
+  //$lab = array();
+?>
+
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <title>Lista de Laboratórios</title>
+    <meta charset="UTF-8"/>    
+
     <!-- Page level plugin CSS-->
     <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
@@ -184,6 +195,19 @@
                     <th>Excluir</th>   
                   </tr>
                 </tfoot>
+  <body>
+    <div class="container">
+      <h3>Lista de Laboratórios</h3>
+     
+      <table border="1" class="table">
+        <thead class="thead-dark">
+            <tr>
+              <th scope="col">Nome</th>     
+              <th scope="col">Código</th>
+              <th scope="col">Qtd. computadores</th> 
+              <th colspan="2">Ação</th>    
+            </tr>
+        </thead>
 
        <?php
           foreach($lab as $aux){
@@ -200,7 +224,7 @@
             echo '<td><a href="../index.php?classe=laboratorio&metodo=delete&id='.$aux->getIdLab().'">Deletar</a></td>';
             echo "</tr>";
             
-          }
+          };
         ?>
 
       </table>
