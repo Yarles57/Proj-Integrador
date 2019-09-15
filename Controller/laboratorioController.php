@@ -63,7 +63,7 @@
 
 		public function delete($id){
 			$this->laboratorioDAO->deleta($id);
-			header("Location: View/dashboard.php");
+			header("Location: View/listarLab.php");
 		}
 
 		public function show($id){
