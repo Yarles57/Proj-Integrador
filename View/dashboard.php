@@ -181,7 +181,7 @@
 
               </div>
               
-              <a class="card-footer text-white clearfix small z-1" href="listarLab.php?classe=laboratorio&metodo=index">
+              <a class="card-footer text-white clearfix small z-1" href="cadasRes.php?classe=reserva&metodo=create">
                 <span class="float-left">Cadastrar Professor</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
