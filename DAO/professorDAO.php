@@ -1,6 +1,6 @@
 <?php
 	require_once "conf/database.class.php";
-	require_once "Model/profModel.php";
+	require_once "Model/professorModel.class.php";
 	
 	class ProfessorDAO{
 
@@ -53,10 +53,10 @@
 
     		$ok = $stmt->execute();
 
-    		header("Location: View/listarProf.php");
+    		header("Location: View/dashboard.php");
 		}
 
-		public function atualizar($laboratorio){
+		public function atualizar($professor){
 			$pdo = Database::conexao();	
 			$idProfessor = $professor->getIdProf()		
 			$cursoProfessor = $professor->getcursoProf();
