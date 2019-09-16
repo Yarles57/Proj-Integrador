@@ -21,14 +21,12 @@
 		}
 
 		public function store(){
-			$idProf = $_POST['id'];
-			$cursoProf = $_POST[''];
-	        $loginProf = $_POST[''];
-	        $senhaProf = $_POST[''];
-	        $celProf = $_POST[''];
-	        $emailProf = $_POST[''];
+			$cursoProf = $_POST['cursoProf'];
+	        $loginProf = $_POST['loginProf'];
+	        $senhaProf = $_POST['senhaProf'];
+	        $celProf = $_POST['celProf'];
+	        $emailProf = $_POST['emailProf'];
 
-	        $this->professor->setIdProf($idProf);
 	        $this->professor->setCursoProf($cursoProf);
 	        $this->professor->setLoginProf($loginProf);
 	        $this->professor->setSenhaProf($senhaProf);
@@ -47,11 +45,11 @@
 		public function update(){
 			//falta preencher esses campos
 			$idProf = $_POST['id'];
-			$cursoProf = $_POST[''];
-	        $loginProf = $_POST[''];
-	        $senhaProf = $_POST[''];
-	        $celProf = $_POST[''];
-	        $emailProf = $_POST[''];
+			$cursoProf = $_POST['cursoProf'];
+	        $loginProf = $_POST['loginProf'];
+	        $senhaProf = $_POST['senhaProf'];
+	        $celProf = $_POST['celProf'];
+	        $emailProf = $_POST['emailProf'];
 
 	        $this->professor->setIdProf($idProf);
 	        $this->professor->setCursoProf($cursoProf);
