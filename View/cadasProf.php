@@ -132,7 +132,7 @@
       <div class="card card-register mx-auto mt-5">
         <div class="card-header">Cadastrar Laboratório </div>
         <div class="card-body">
-          <form action="../index.php" method="post">
+          <form action="../indexProf.php" method="post">
             <div class="form-group">
               <div class="form-row">
               
