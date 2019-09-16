@@ -179,7 +179,7 @@
 
 
                 <input type="hidden" name="metodo" value="store">
-                <input type="hidden"  name="classe" value="laboratorio">
+                <input type="hidden"  name="classe" value="professor">
                 <input type="submit" value="Salvar" class="btn btn-primary">
               </form>
 
