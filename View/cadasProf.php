@@ -1,39 +1,34 @@
-<?php
-  require_once "../Model/labModel.php";
-  session_start();
-  $lab = $_SESSION['laboratorios'];  
-?>
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html lang="PT-BR">
+<head>
+  <title>Cadastrar Professor</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>ResLab</title>
+   <!-- Custom fonts for this template-->
+  <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-    <!-- Custom fonts for this template-->
-    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template-->
+  <link href="../css/sb-admin.css" rel="stylesheet">
+  <style type="text/css">
+    
+    .col-md-6{
+      margin-top: 3%;
+    }
+  </style>
+</head>
+<body class="bg-dark">
+  <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+    <a class="navbar-brand mr-1" href="dashboard.php"></a>
 
-    <!-- Page level plugin CSS-->
-    <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="../css/sb-admin.css" rel="stylesheet">
-  </head>
-
-  <body id="page-top">
-    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-
-    <a class="navbar-brand mr-1" href="index.html"></a>
-
-    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="../dashboard.php">
       <i class="fas fa-bars"></i>
     </button>
-     <!-- Navbar Search -->
+
+    <!-- Navbar Search -->
     <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
       <div class="input-group">
       
@@ -57,13 +52,19 @@
     </ul>
 
 
+    <!-- Navbar -->
 
   </nav>
-
   <div id="wrapper">
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="dashboard.php">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Painel de Controle</span>
+        </a>
+      </li>
       <li class="nav-item dropdown">
         
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -124,58 +125,64 @@
           <li class="breadcrumb-item">
             <a href="dashboard.php">Painel de Controle</a>
           </li>
-          <li class="breadcrumb-item active">Listar Laboratórios</li>
+          <li class="breadcrumb-item active">Cadastrar Professor</li>
         </ol>
 
-    <div class="card mb-3">
-          <div class="card-header">
-            <i class="fas fa-table"></i>
-            Tabela de Dados</div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th>Nome</th>     
-                    <th>Código</th>
-                    <th>Qtd. computadores</th> 
-                    <th>Editar</th>
-                    <th>Excluir</th>   
-                  </tr>
-                </thead>
+    <div class="container">
+      <div class="card card-register mx-auto mt-5">
+        <div class="card-header">Cadastrar Laboratório </div>
+        <div class="card-body">
+          <form action="../index.php" method="post">
+            <div class="form-group">
+              <div class="form-row">
+              
+               <div class="col-md-6">
+                <div class="form-label-group">
+                  <input  type="text" id="cursoProf" class="form-control" placeholder="Curso do Professor" required="on" autofocus="autofocus" name="cursoProf">
+                  <label for="cursoProf">Curso do Professor</label>
+                </div>
+              </div>
 
-                <tfoot>
-                  <tr>
-                    <th>Nome</th>     
-                    <th>Código</th>
-                    <th>Qtd. computadores</th> 
-                    <th>Editar</th>
-                    <th>Excluir</th>   
-                  </tr>
-                </tfoot>
-
-       <?php
-          foreach($lab as $aux){
-            echo "<tr>";
-            echo "<td>{$aux->getNomeLab()}</td>";
-
-            echo "<td>{$aux->getCodLab()}</td>";
-
-            echo "<td>{$aux->getQtdComputadores()}</td>";
-           
-                
-            echo '<td><a href="../index.php?classe=laboratorio&metodo=edit&id='.$aux->getIdLab().'">Editar</a></td>';          
-
-            echo '<td><a href="../index.php?classe=laboratorio&metodo=delete&id='.$aux->getIdLab().'">Deletar</a></td>';
-            echo "</tr>";
-            
-          }
-        ?>
-
-      </table>
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input  type="text" id="loginProf" class="form-control" placeholder="Login do Professor" required="on" autofocus="autofocus" name="loginProf">
+                  <label for="loginProf">Login do Professor</label>
+                </div>
+              </div>
 
 
-     <a href="../index.php?classe=laboratorio&metodo=create">Adicionar</a>
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input  type="text" id="senhaProf" class="form-control" placeholder="Senha do Professor" required="on" autofocus="autofocus" name="senhaProf">
+                  <label for="senhaProf">Senha do Professor</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input  type="text" id="celProf" class="form-control" placeholder="Senha do Professor" required="on" autofocus="autofocus" name="celProf">
+                  <label for="celProf">N° para contato do Professor</label>
+                </div>
+              </div>
+
+
+
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="email" class="form-control" id="emailProf" placeholder="Seu email" name="emailProf">
+                  <label for="emailProf">Email do Professor</label>
+                </div>
+              </div>
+              </div>
+              </div>
+</div>
+
+
+                <input type="hidden" name="metodo" value="store">
+                <input type="hidden"  name="classe" value="professor">
+                <input type="submit" value="Salvar" class="btn btn-primary">
+              </form>
+
 
      <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
@@ -195,9 +202,6 @@
   <!-- Demo scripts for this page-->
   <script src="../js/demo/datatables-demo.js"></script>
   <script src="../js/demo/chart-area-demo.js"></script>
-      
-   
 
-  </body>
-
+</body>
 </html>
