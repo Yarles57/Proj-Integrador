@@ -23,7 +23,7 @@
 		public function store(){
 			$cursoProf = $_POST['cursoProf'];
 	        $loginProf = $_POST['loginProf'];
-	        $senhaProf = $_POST['senhaProf'];
+	        $senhaProf = md5($_POST['senhaProf']);
 	        $celProf = $_POST['celProf'];
 	        $emailProf = $_POST['emailProf'];
 
