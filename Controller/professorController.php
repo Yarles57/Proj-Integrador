@@ -22,7 +22,8 @@
 
 		public function store(){
 			$cursoProf = $_POST['cursoProf'];
-	        $loginProf = $_POST['loginProf'];
+			$loginProf = $_POST['loginProf'];
+			//md5 é para criptografar a senha
 	        $senhaProf = md5($_POST['senhaProf']);
 	        $celProf = $_POST['celProf'];
 	        $emailProf = $_POST['emailProf'];
