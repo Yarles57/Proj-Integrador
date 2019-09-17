@@ -18,7 +18,7 @@
 	}
 	else{
 		$classe ="LaboratorioController";
-		$metodo ="index";
+		$metodo ="inicio";
 	}
 
 	$controller = new $classe();
