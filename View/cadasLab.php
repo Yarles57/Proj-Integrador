@@ -13,6 +13,8 @@
 
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
+  <link href="../css/sb-img.css" rel="stylesheet">
+
 
 </head>
 <body class="bg-dark">
