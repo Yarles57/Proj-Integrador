@@ -152,10 +152,11 @@
             </div>
           </div>
 
-			   <input type="hidden" name="metodo" value="store">
-	        <input type="hidden"  name="classe" value="laboratorio">
+        <input type="hidden" name="metodo" value="store">
+	      <input type="hidden"  name="classe" value="laboratorio">
 
-<input type="submit" value="Salvar" class="btn btn-primary">
+
+        <input type="submit" value="Salvar" class="btn btn-primary">
 
     </form>
   </div>
