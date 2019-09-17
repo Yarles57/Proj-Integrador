@@ -1,6 +1,6 @@
 <?php
 	require_once "conf/database.class.php";
-	require_once "Model/labModel.php";
+	require_once "Model/laboratorioModel.class.php";
 	
 	class LaboratorioDAO{
 
