@@ -13,6 +13,8 @@
 
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
+  <link href="../css/sb-img.css" rel="stylesheet">
+
 
 </head>
 <body class="bg-dark">
@@ -130,6 +132,7 @@
         <form action="../index.php" method="post">
           <div class="form-group">
             <div class="form-row">
+              
               <div class="col-md-6">
                 <div class="form-label-group">
                   <input  type="text" id="firstName" class="form-control" placeholder="First name" required="on" autofocus="autofocus" name="nomeLab">
@@ -151,12 +154,16 @@
               <label for="inputEmail">Quantidade de Computadores</label>
             </div>
           </div>
+        
+      </div>
+      
+
 
         <input type="hidden" name="metodo" value="store">
 	      <input type="hidden"  name="classe" value="laboratorio">
 
-
         <input type="submit" value="Salvar" class="btn btn-primary">
+
 
     </form>
   </div>

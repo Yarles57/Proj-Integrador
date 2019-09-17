@@ -1,5 +1,5 @@
 <?php
-	include "Controller/laboratorioController.php";
+	include "Controller/professorController.php";
 	
 	if(isset($_GET['classe']) && isset($_GET['metodo'])){
 		$classe = $_GET['classe'].'Controller';
@@ -17,8 +17,8 @@
 		}
 	}
 	else{
-		$classe ="LaboratorioController";
-		$metodo ="inicio";
+		$classe ="ProfessorController";
+		$metodo ="index";
 	}
 
 	$controller = new $classe();
