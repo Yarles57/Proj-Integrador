@@ -13,6 +13,7 @@
 
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
+
   <style type="text/css">
     
     .col-md-6{
