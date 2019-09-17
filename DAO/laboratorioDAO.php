@@ -48,7 +48,7 @@
 
     		$ok = $stmt->execute();
 
-    		header("Location: View/dashboard.php");
+    		// header("Location: View/listarLab.php");
 		}
 
 		public function atualizar($laboratorio){
@@ -65,7 +65,7 @@
     		$stmt->bindParam(4, $idLaboratorio);
     		
     		$ok = $stmt->execute();
-    		header("Location: View/listarLab.php");
+    		// header("Location: View/listarLab.php");
 		}
 
 			public function deleta($id){
