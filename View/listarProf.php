@@ -1,13 +1,14 @@
 <?php
-require_once "../Model/laboratorioModel.class.php";
+  require_once "../Model/professorModel.class.php";
   session_start();
-  if(!empty( $_SESSION['laboratorios'])){
-     $lab = $_SESSION['laboratorios'];
+  if(!empty( $_SESSION['professores'])){
+     $prof = $_SESSION['professores'];
   }
   else{
     header("Location: ../indexProf.php");
     # code...
   }
+
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +84,7 @@ require_once "../Model/laboratorioModel.class.php";
          
           <h6 class="dropdown-header">Gerenciar Laboratório:</h6>
           <a class="dropdown-item" href="cadasLab.php?classe=laboratorio&metodo=create">Cadastrar</a>
-          <a class="dropdown-item" href="listarLab.php?classe=laboratorio&metodo=index">Listar</a>
+          <a class="dropdown-item" href="listarLab.php?classe=laboratoriora&metodo=index">Listar</a>
           <div class="dropdown-divider"></div>
         </div>
 
@@ -132,7 +133,7 @@ require_once "../Model/laboratorioModel.class.php";
           <li class="breadcrumb-item">
             <a href="dashboard.php">Painel de Controle</a>
           </li>
-          <li class="breadcrumb-item active">Listar Laboratórios</li>
+          <li class="breadcrumb-item active">Listar Professores</li>
         </ol>
 
     <div class="card mb-3">
@@ -144,9 +145,11 @@ require_once "../Model/laboratorioModel.class.php";
               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Nome</th>     
-                    <th>Código</th>
-                    <th>Qtd. computadores</th> 
+                    <th>Curso</th>
+                    <th>Nome</th>
+                    <th>Senha</th> 
+                    <th>Celular</th>
+                    <th>Email</th>
                     <th>Editar</th>
                     <th>Excluir</th>   
                   </tr>
@@ -154,28 +157,28 @@ require_once "../Model/laboratorioModel.class.php";
 
                 <tfoot>
                   <tr>
-                    <th>Nome</th>     
-                    <th>Código</th>
-                    <th>Qtd. computadores</th> 
+                    <th>Curso</th>
+                    <th>Nome</th>
+                    <th>Senha</th> 
+                    <th>Celular</th>
+                    <th>Email</th> 
                     <th>Editar</th>
-                    <th>Excluir</th>   
+                    <th>Excluir</th>    
                   </tr>
                 </tfoot>
 
        <?php
        // die(" Ok ");
-          foreach($lab as $aux){
+          foreach($prof as $aux){
             echo "<tr>";
-            echo "<td>{$aux->getNomeLab()}</td>";
+            echo "<td>{$aux->getCursoProf()}</td>";
+            echo "<td>{$aux->getLoginProf()}</td>";
+            echo "<td>{$aux->getSenhaProf()}</td>";
+            echo "<td>{$aux->getCelProf()}</td>";
+            echo "<td>{$aux->getEmailProf()}</td>";
 
-            echo "<td>{$aux->getCodLab()}</td>";
-
-            echo "<td>{$aux->getQtdComputadores()}</td>";
-           
-                
-            echo '<td><a href="../index.php?classe=laboratorio&metodo=edit&id='.$aux->getIdLab().'">Editar</a></td>';          
-
-            echo '<td><a href="../index.php?classe=laboratorio&metodo=delete&id='.$aux->getIdLab().'">Deletar</a></td>';
+            echo '<td><a href="../indexProf.php?classe=professor&metodo=edit&id='.$aux->getIdProf().'">Editar</a></td>';
+            echo '<td><a href="../indexProf.php?classe=professor&metodo=delete&id='.$aux->getIdProf().'">Deletar</a></td>';
             echo "</tr>";
             
           }
@@ -184,7 +187,7 @@ require_once "../Model/laboratorioModel.class.php";
       </table>
 
 
-     <a href="../index.php?classe=laboratorio&metodo=create">Adicionar</a>
+     <a href="../indexProf.php?classe=professor&metodo=create">Adicionar</a>
 
      <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>

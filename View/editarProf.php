@@ -1,7 +1,24 @@
+<?php
+  require_once "../Model/professorModel.class.php";
+  session_start();
+  $prof = $_SESSION['editaProf'];
+
+  foreach($prof as $aux){
+    $idProfessor = $aux['idProf'];
+    $loginProfessor = $aux['loginProf'];
+    $celProfessor = $aux['celProf'];
+    $cursoProfessor = $aux['cursoProf'];
+    $emailProfessor = $aux['emailProf'];
+    $senhaProfessor = $aux['senhaProf'];
+
+  } 
+
+?>
+
 <!DOCTYPE html>
 <html lang="PT-BR">
 <head>
-  <title>Cadastrar Professor</title>
+  <title>Editar Laboratório</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,13 +30,9 @@
 
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
+  <link href="../css/sb-img.css" rel="stylesheet">
 
-  <style type="text/css">
-    
-    .col-md-6{
-      margin-top: 3%;
-    }
-  </style>
+
 </head>
 <body class="bg-dark">
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
@@ -52,6 +65,7 @@
       </li>
     </ul>
 
+    
 
     <!-- Navbar -->
 
@@ -87,7 +101,7 @@
         
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Ger. Professor</span>
+          <span>Ger. Profrofessor</span>
         </a>
         
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
@@ -126,66 +140,82 @@
           <li class="breadcrumb-item">
             <a href="dashboard.php">Painel de Controle</a>
           </li>
-          <li class="breadcrumb-item active">Cadastrar Professor</li>
+          <li class="breadcrumb-item active">Editar Laboratório</li>
         </ol>
 
     <div class="container">
       <div class="card card-register mx-auto mt-5">
-        <div class="card-header">Cadastrar Laboratório </div>
-        <div class="card-body">
-          <form action="../indexProf.php" method="post">
-            <div class="form-group">
-              <div class="form-row">
+        <div class="card-header">Editar Laboratório</div>
+      <div class="card-body">
+
+        <form action="../indexProf.php" method="post">
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="text" id="firstName" class="form-control" placeholder="Nome do Professor" required="on" autofocus="autofocus" name="loginProf" value= "<?php echo "$loginProfessor";?>">
+                  <label for="firstName">Nome do Professor</label>
+                </div>
+                </div>
               
-               <div class="col-md-6">
-                <div class="form-label-group">
-                  <input  type="text" id="cursoProf" class="form-control" placeholder="Curso do Professor" required="on" autofocus="autofocus" name="cursoProf">
-                  <label for="cursoProf">Curso do Professor</label>
-                </div>
-              </div>
-
               <div class="col-md-6">
                 <div class="form-label-group">
-                  <input  type="text" id="loginProf" class="form-control" placeholder="Nome do Professor" required="on" autofocus="autofocus" name="loginProf">
-                  <label for="loginProf">Nome do Professor</label>
+                  <input type="tel" id="lastName" class="form-control" placeholder="Celular do Professor" name="celProf" required="on" value="<?php echo "$celProfessor";?>" >
+                  <label for="lastName">Celular do Professor</label>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input input type="text" min="1" id="inputEmail" class="form-control" placeholder="Curso do Professor" name="cursoProf" required="on" value="<?php echo "$cursoProfessor";?>">
+              <label for="inputEmail">Curso do Professor</label>
+            </div>
+          </div>
 
+          <div class="form-group">
+            <div class="form-label-group">
+              <input input type="email" min="1" id="inputEmail" class="form-control" placeholder="E-mail do Professor" name="emailProf" required="on" value="<?php echo "$emailProfessor";?>">
+              <label for="inputEmail">E-mail do Professor</label>
+            </div>
+          </div>
 
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input  type="password" id="senhaProf" class="form-control" placeholder="Senha do Professor" required="on" autofocus="autofocus" name="senhaProf">
-                  <label for="senhaProf">Senha do Professor</label>
-                </div>
-              </div>
+          <div class="form-group">
+            <div class="form-label-group">
+              <input input type="text" min="1" id="inputEmail" class="form-control" placeholder="Senha do Professor" name="senhaProf" required="on" value="<?php echo "$senhaProfessor";?>">
+              <label for="inputEmail">Senha do Professor</label>
+            </div>
+          </div>
 
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input  type="text" id="celProf" class="form-control" placeholder="N° para contato do Professor" required="on" autofocus="autofocus" name="celProf">
-                  <label for="celProf">N° para contato do Professor</label>
-                </div>
-              </div>
+          <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Pronto para partir?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Selecione "Sair" abaixo se você estiver pronto para encerrar sua sessão atual.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <a class="btn btn-primary" href="login.html">Sair</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
+        <input type="hidden" name="id" value="<?php echo "$idProfessor";?>">
+        <input type="hidden" name="metodo" value="update">
+        <input type="hidden"  name="classe" value="professor">
 
+        <button type="submit" class="btn btn-primary">Alterar</button>
 
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input type="email" class="form-control" id="emailProf" placeholder="Seu email" name="emailProf">
-                  <label for="emailProf">Email do Professor</label>
-                </div>
-              </div>
-              </div>
-              </div>
-</div>
+    </form>
+  </div>
 
-
-                <input type="hidden" name="metodo" value="store">
-                <input type="hidden"  name="classe" value="professor">
-                <input type="submit" value="Salvar" class="btn btn-primary">
-              </form>
-
-
-     <!-- Bootstrap core JavaScript-->
+  <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
   <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -203,6 +233,7 @@
   <!-- Demo scripts for this page-->
   <script src="../js/demo/datatables-demo.js"></script>
   <script src="../js/demo/chart-area-demo.js"></script>
+
 
 </body>
 </html>

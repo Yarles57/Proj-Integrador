@@ -1,5 +1,5 @@
 <?php
-  require_once "../Model/labModel.php";
+  require_once "../Model/laboratorioModel.class.php";
   session_start();
   $lab = $_SESSION['editaLab'];
 
