@@ -14,7 +14,7 @@
 			session_start();
 			$_SESSION['professores'] = $prof;
 
-			header('Location: View/dashboard.php');
+			header('Location: View/listarProf.php');
         }
         public function create(){
 			header("Location: View/cadasProf.php");
