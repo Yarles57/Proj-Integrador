@@ -1,9 +1,13 @@
 <?php
-  require_once "../Model/labOratorioModel.class.php";
+require_once "../Model/laboratorioModel.class.php";
   session_start();
-
-  $lab = $_SESSION['laboratorios']; 
-
+  if(!empty( $_SESSION['laboratorios'])){
+     $lab = $_SESSION['laboratorios'];
+  }
+  else{
+    header("Location: ../indexProf.php");
+    # code...
+  }
 ?>
 
 <!DOCTYPE html>
