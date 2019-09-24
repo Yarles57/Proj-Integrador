@@ -5,8 +5,7 @@
      $prof = $_SESSION['professores'];
   }
   else{
-    header("Location: ../indexProf.php");
-    # code...
+      header("Location: ../indexProf.php");
   }
 
 ?>
