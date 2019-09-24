@@ -1,15 +1,3 @@
-<?php
-  require_once "../Model/professorModel.class.php";
-  session_start();
-  if(!empty( $_SESSION['professores'])){
-     $prof = $_SESSION['professores'];
-  }
-  else{
-      header("Location: ../indexProf.php");
-  }
-
-?>
-
 <!DOCTYPE html>
 <html>
   <head>
