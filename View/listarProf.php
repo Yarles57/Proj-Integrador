@@ -147,7 +147,6 @@
                   <tr>
                     <th>Curso</th>
                     <th>Nome</th>
-                    <th>Senha</th> 
                     <th>Celular</th>
                     <th>Email</th>
                     <th>Editar</th>
@@ -159,7 +158,6 @@
                   <tr>
                     <th>Curso</th>
                     <th>Nome</th>
-                    <th>Senha</th> 
                     <th>Celular</th>
                     <th>Email</th> 
                     <th>Editar</th>
@@ -172,7 +170,6 @@
             echo "<tr>";
             echo "<td>{$aux->getCursoProf()}</td>";
             echo "<td>{$aux->getLoginProf()}</td>";
-            echo "<td>{$aux->getSenhaProf()}</td>";
             echo "<td>{$aux->getCelProf()}</td>";
             echo "<td>{$aux->getEmailProf()}</td>";
 
