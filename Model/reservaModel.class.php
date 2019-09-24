@@ -1,12 +1,12 @@
 <?php
 
-class {
-    private idRes;
-    private dataRes;
-    private horaRes;
-    private idProf;
-    private idLab;
-    private idAdmin;
+class Reserva{
+    private $idRes;
+    private $dataRes;
+    private $horaRes;
+    private $idProf;
+    private $idLab;
+    private $idAdmin;
 
     public function getIdRes(){
         return $this->idRes;
