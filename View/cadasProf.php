@@ -130,6 +130,7 @@
         </ol>
 
     <div class="container">
+      
       <div class="card card-register mx-auto mt-5">
         <div class="card-header">Cadastrar Laboratório </div>
         <div class="card-body">
