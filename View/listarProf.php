@@ -5,8 +5,7 @@
      $prof = $_SESSION['professores'];
   }
   else{
-    header("Location: ../indexProf.php");
-    # code...
+      header("Location: ../indexProf.php");
   }
 
 ?>
@@ -147,7 +146,6 @@
                   <tr>
                     <th>Curso</th>
                     <th>Nome</th>
-                    <th>Senha</th> 
                     <th>Celular</th>
                     <th>Email</th>
                     <th>Editar</th>
@@ -159,7 +157,6 @@
                   <tr>
                     <th>Curso</th>
                     <th>Nome</th>
-                    <th>Senha</th> 
                     <th>Celular</th>
                     <th>Email</th> 
                     <th>Editar</th>
@@ -168,12 +165,10 @@
                 </tfoot>
 
        <?php
-       // die(" Ok ");
           foreach($prof as $aux){
             echo "<tr>";
             echo "<td>{$aux->getCursoProf()}</td>";
             echo "<td>{$aux->getLoginProf()}</td>";
-            echo "<td>{$aux->getSenhaProf()}</td>";
             echo "<td>{$aux->getCelProf()}</td>";
             echo "<td>{$aux->getEmailProf()}</td>";
 

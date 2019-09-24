@@ -74,11 +74,4 @@
 			$this->laboratorioDAO->deleta($id);
 			$this->index();
 		}
-
-		public function show($id){
-			$lab = $this->laboratorioDAO->listaRegistro($id);
-			session_start();
-			$_SESSION['showLab'] = $lab;
-			header("Location: View/showLab.php");
-		}
 	}
