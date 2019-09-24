@@ -140,12 +140,12 @@
           <li class="breadcrumb-item">
             <a href="dashboard.php">Painel de Controle</a>
           </li>
-          <li class="breadcrumb-item active">Editar Laboratório</li>
+          <li class="breadcrumb-item active">Editar Professor</li>
         </ol>
 
     <div class="container">
       <div class="card card-register mx-auto mt-5">
-        <div class="card-header">Editar Laboratório</div>
+        <div class="card-header">Editar Professor</div>
       <div class="card-body">
 
         <form action="../indexProf.php" method="post">

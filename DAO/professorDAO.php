@@ -53,11 +53,11 @@
 
     		$ok = $stmt->execute();
 
-    		header("Location: View/dashboard.php");
 		}
 
 		public function atualizar($professor){
 			$pdo = Database::conexao();	
+
 			$idProfessor = $professor->getIdProf();	
 			$cursoProfessor = $professor->getCursoProf();
 			$loginProfessor = $professor->getLoginProf();
@@ -65,17 +65,18 @@
 			$celProfessor = $professor->getCelProf();
 			$emailProfessor = $professor->getEmailProf();
 
-			$query = "UPDATE professor SET cursoProf = ?, loginProf = ?, senhaProf = ?,celProf = ?, emailProf = ?) WHERE idProf = ?";
+			$query = "UPDATE professor SET cursoProf=?, loginProf=?, senhaProf=?,celProf=?, emailProf=? WHERE idProf=?";
+
+			$stmt = $pdo->prepare($query);
     		$stmt->bindParam(1,$cursoProfessor);
     		$stmt->bindParam(2, $loginProfessor);
     		$stmt->bindParam(3, $senhaProfessor);
     		$stmt->bindParam(4, $celProfessor);
     		$stmt->bindParam(5, $emailProfessor);
-    		$stmt->bindParam(5, $idProfessor);
+    		$stmt->bindParam(6, $idProfessor);
 
     		
     		$ok = $stmt->execute();
-    		header("Location: View/listarProf.php");
 		}
 
 			public function deleta($id){

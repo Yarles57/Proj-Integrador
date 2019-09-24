@@ -11,16 +11,17 @@
 			$this->laboratorio = new Laboratorio;
 		}
 
-		public function inicio(){
-			header("Location: View/dashboard.php");
-		}
-
 		public function index(){
 			$lab = $this->laboratorioDAO->listarTudo();
 			session_start();
 			$_SESSION['laboratorios'] = $lab;
+
 			header('Location: View/listarLab.php');
         }
+
+		public function inicio(){
+			header("Location: View/dashboard.php");
+		}
 
         public function create(){
 			header("Location: View/cadasLab.php");
@@ -72,12 +73,5 @@
 		public function delete($id){
 			$this->laboratorioDAO->deleta($id);
 			$this->index();
-		}
-
-		public function show($id){
-			$lab = $this->laboratorioDAO->listaRegistro($id);
-			session_start();
-			$_SESSION['showLab'] = $lab;
-			header("Location: View/showLab.php");
 		}
 	}
