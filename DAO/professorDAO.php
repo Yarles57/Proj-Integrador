@@ -33,14 +33,14 @@
 			return $linha;
 		}
 
-		public function insere($laboratorio){
+		public function insere($professor){
 			$pdo = Database::conexao();
 
-				$cursoProfessor = $professor->getcursoProf();
-				$loginProfessor = $professor->getLoginProf();
-				$senhaProfessor = $professor->getSenhaProf();
-				$celProfessor = $professor->getCelProf();
-				$emailProfessor = $professor->getEmailProf();	
+			$cursoProfessor = $professor->getCursoProf();
+			$loginProfessor = $professor->getLoginProf();
+			$senhaProfessor = $professor->getSenhaProf();
+			$celProfessor = $professor->getCelProf();
+			$emailProfessor = $professor->getEmailProf();	
 
 			$query = "INSERT INTO professor (cursoProf, loginProf, senhaProf,celProf, emailProf ) VALUES (?,?,?, ?, ?)";
 
@@ -58,8 +58,8 @@
 
 		public function atualizar($professor){
 			$pdo = Database::conexao();	
-			$idProfessor = $professor->getIdProf()		
-			$cursoProfessor = $professor->getcursoProf();
+			$idProfessor = $professor->getIdProf();	
+			$cursoProfessor = $professor->getCursoProf();
 			$loginProfessor = $professor->getLoginProf();
 			$senhaProfessor = $professor->getSenhaProf();
 			$celProfessor = $professor->getCelProf();
