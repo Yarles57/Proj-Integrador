@@ -35,6 +35,7 @@
 	        $this->professor->setEmailProf($emailProf);
 	   
 	        $this->professorDAO->insere($this->professor);
+	        $this->index();
 		}
 		public function edit($id){
 			$prof = $this->professorDAO->listaRegistro($id);
@@ -60,6 +61,8 @@
 	        $this->professor->setEmailProf($emailProf);
 
 	        $this->professorDAO->atualizar($this->professor);
+
+	        $this->index();
 		}
 		public function delete($id){
 			$this->professorDAO->deleta($id);
