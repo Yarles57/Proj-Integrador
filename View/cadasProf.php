@@ -165,7 +165,7 @@
                   <label for="celProf">N° para contato do Professor</label>
                 </div>
               </div>
-
+              
 
 
               <div class="col-md-6">
@@ -174,9 +174,10 @@
                   <label for="emailProf">Email do Professor</label>
                 </div>
               </div>
+              
               </div>
               </div>
-</div>
+              </div>
 
 
                 <input type="hidden" name="metodo" value="store">
@@ -203,6 +204,6 @@
   <!-- Demo scripts for this page-->
   <script src="../js/demo/datatables-demo.js"></script>
   <script src="../js/demo/chart-area-demo.js"></script>
-
+  
 </body>
 </html>
