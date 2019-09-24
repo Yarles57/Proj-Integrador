@@ -2,6 +2,7 @@
 	require_once "DAO/professorDAO.php";
 
 	class ProfessorController{
+		
 		private $professor;
 		private $professorDAO;
 
@@ -16,6 +17,11 @@
 
 			header('Location: View/listarProf.php');
         }
+        
+        public function inicio(){
+			header("Location: View/dashboard.php");
+		}
+
         public function create(){
 			header("Location: View/cadasProf.php");
 		}
@@ -35,6 +41,8 @@
 	        $this->professor->setEmailProf($emailProf);
 	   
 	        $this->professorDAO->insere($this->professor);
+	        $this->index();
+
 		}
 		public function edit($id){
 			$prof = $this->professorDAO->listaRegistro($id);
@@ -60,10 +68,19 @@
 	        $this->professor->setEmailProf($emailProf);
 
 	        $this->professorDAO->atualizar($this->professor);
+	        $this->index();
 		}
 		public function delete($id){
 			$this->professorDAO->deleta($id);
 
 			header("Location: View/listarProf.php");
 		}
+
+		public function show($id){
+			$prof = $this->professorDAO->listaRegistro($id);
+			session_start();
+			$_SESSION['showProf'] = $lab;
+			header("Location: View/showProf.php");
+		}
+
 	}
