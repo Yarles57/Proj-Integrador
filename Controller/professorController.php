@@ -2,6 +2,7 @@
 	require_once "DAO/professorDAO.php";
 
 	class ProfessorController{
+		
 		private $professor;
 		private $professorDAO;
 
@@ -21,6 +22,11 @@
 
 			header('Location: View/listarProf.php');
         }
+        
+        public function inicio(){
+			header("Location: View/dashboard.php");
+		}
+
         public function create(){
 			header("Location: View/cadasProf.php");
 		}
@@ -74,4 +80,12 @@
 
 			$this->index();
 		}
+
+		public function show($id){
+			$prof = $this->professorDAO->listaRegistro($id);
+			session_start();
+			$_SESSION['showProf'] = $lab;
+			header("Location: View/showProf.php");
+		}
+
 	}
