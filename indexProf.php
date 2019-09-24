@@ -18,7 +18,7 @@
 	}
 	else{
 		$classe ="ProfessorController";
-		$metodo ="index";
+		$metodo ="inicio";
 	}
 
 	$controller = new $classe();
