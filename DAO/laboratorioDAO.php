@@ -16,8 +16,7 @@
 				$laboratorio[$i]->setIdLab($linhas[$i]['idLab']);
 				$laboratorio[$i]->setNomeLab($linhas[$i]['nomeLab']);
 				$laboratorio[$i]->setQtdComputadores($linhas[$i]['qtdcompLab']);
-				$laboratorio[$i]->setCodLab($linhas[$i]['codLab']);
-			
+				$laboratorio[$i]->setCodLab($linhas[$i]['codLab']);			
 			}	
 	  		return $laboratorio;
 		}
@@ -48,7 +47,7 @@
 
     		$ok = $stmt->execute();
 
-    		// header("Location: View/listarLab.php");
+    		header("Location: View/listarLab.php");
 		}
 
 		public function atualizar($laboratorio){
