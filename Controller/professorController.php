@@ -23,10 +23,6 @@
 			header('Location: View/listarProf.php');
         }
         
-        public function inicio(){
-			header("Location: View/dashboard.php");
-		}
-
         public function create(){
 			header("Location: View/cadasProf.php");
 		}
