@@ -168,7 +168,6 @@
                 </tfoot>
 
        <?php
-       // die(" Ok ");
           foreach($prof as $aux){
             echo "<tr>";
             echo "<td>{$aux->getCursoProf()}</td>";
