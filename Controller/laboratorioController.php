@@ -11,16 +11,17 @@
 			$this->laboratorio = new Laboratorio;
 		}
 
-		public function inicio(){
-			header("Location: View/dashboard.php");
-		}
-
 		public function index(){
 			$lab = $this->laboratorioDAO->listarTudo();
 			session_start();
 			$_SESSION['laboratorios'] = $lab;
+
 			header('Location: View/listarLab.php');
         }
+
+		public function inicio(){
+			header("Location: View/dashboard.php");
+		}
 
         public function create(){
 			header("Location: View/cadasLab.php");
