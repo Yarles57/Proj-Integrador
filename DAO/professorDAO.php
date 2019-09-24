@@ -53,7 +53,7 @@
 
     		$ok = $stmt->execute();
 
-    		header("Location: View/dashboard.php");
+    		//header("Location: View/dashboard.php");
 		}
 
 		public function atualizar($professor){
@@ -75,7 +75,7 @@
 
     		
     		$ok = $stmt->execute();
-    		header("Location: View/listarProf.php");
+    		//header("Location: View/listarProf.php");
 		}
 
 			public function deleta($id){
