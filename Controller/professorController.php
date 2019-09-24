@@ -9,6 +9,11 @@
 			$this->professorDAO= new ProfessorDAO;
 			$this->professor = new Professor;
 		}
+
+		public function inicio(){
+			header("Location: View/dashboard.php");
+		}
+
 		public function index(){
 			$prof = $this->professorDAO->listarTudo();
 			session_start();
@@ -67,6 +72,6 @@
 		public function delete($id){
 			$this->professorDAO->deleta($id);
 
-			header("Location: View/listarProf.php");
+			$this->index();
 		}
 	}
