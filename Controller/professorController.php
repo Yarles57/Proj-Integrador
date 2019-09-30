@@ -11,9 +11,7 @@
 			$this->professor = new Professor;
 		}
 
-		public function inicio(){
-			header("Location: View/dashboard.php");
-		}
+		
 
 		public function index(){
 			$prof = $this->professorDAO->listarTudo();
@@ -21,7 +19,16 @@
 			$_SESSION['professores'] = $prof;
 
 			header('Location: View/listarProf.php');
+
         }
+        
+
+
+		}
+		
+		public function inicio(){
+			header("Location: View/dashboard.php");
+		}
         
 
         public function create(){

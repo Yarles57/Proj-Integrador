@@ -1,19 +1,19 @@
 <?php
 
-class {
-    private idRes;
-    private dataRes;
-    private horaRes;
-    private idProf;
-    private idLab;
-    private idAdmin;
+class Reserva{
+    private $idRes;
+    private $dataRes;
+    private $horaRes;
+    private $idProf;
+    private $idLab;
+    private $idAdmin;
 
     public function getIdRes(){
         return $this->idRes;
     }
 
     public function setIdRes($idRes){
-        $this->idRes=idRes;
+        $this->idRes = $idRes;
     }
 
 
@@ -22,7 +22,7 @@ class {
     }
 
     public function setDataRes($dataRes){
-        $this->dataRes=dataRes;
+        $this->dataRes = $dataRes;
     }
 
 
@@ -31,7 +31,7 @@ class {
     }
 
     public function setHoraRes($horaRes){
-        $this->horaRes=horaRes;
+        $this->horaRes = $horaRes;
     }
 
 
@@ -40,7 +40,7 @@ class {
     }
 
     public function setIdProf($idProf){
-        $this->idProf=idProf;
+        $this->idProf = $idProf;
     }
 
 
@@ -49,7 +49,7 @@ class {
     }
 
     public function setIdLab($idLab){
-        $this->idLab=idLab;
+        $this->idLab = $idLab;
     }
 
 
@@ -58,7 +58,7 @@ class {
     }
 
     public function setIdAdmin($idAdmin){
-        $this->idAdmin=idAdmin;
+        $this->idAdmin = $idAdmin;
     }
     
 }
