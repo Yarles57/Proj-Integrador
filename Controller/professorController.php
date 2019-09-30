@@ -10,9 +10,7 @@
 			$this->professorDAO= new ProfessorDAO;
 			$this->professor = new Professor;
 		}
-
 		
-
 		public function index(){
 			$prof = $this->professorDAO->listarTudo();
 			session_start();
@@ -21,8 +19,6 @@
 			header('Location: View/listarProf.php');
 
         }
-        
-
 
 		}
 		
