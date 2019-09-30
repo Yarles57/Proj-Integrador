@@ -109,7 +109,6 @@
         
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <h6 class="dropdown-header">Gerenciar Reservas: </h6>
-          <a class="dropdown-item" href="cadasRes.php?classe=reserva&metodo=create">Cadastrar</a>
           <a class="dropdown-item" href="listarRes.php?classe=reserva&metodo=index">Listar</a>
         </div>
 
@@ -166,7 +165,7 @@
                   <label for="celProf">N° para contato do Professor</label>
                 </div>
               </div>
-
+              
 
 
               <div class="col-md-6">
@@ -175,9 +174,10 @@
                   <label for="emailProf">Email do Professor</label>
                 </div>
               </div>
+              
               </div>
               </div>
-</div>
+              </div>
 
 
                 <input type="hidden" name="metodo" value="store">
@@ -204,6 +204,6 @@
   <!-- Demo scripts for this page-->
   <script src="../js/demo/datatables-demo.js"></script>
   <script src="../js/demo/chart-area-demo.js"></script>
-
+  
 </body>
 </html>

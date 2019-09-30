@@ -115,7 +115,6 @@
         
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
           <h6 class="dropdown-header">Gerenciar Reservas: </h6>
-          <a class="dropdown-item" href="cadasRes.php?classe=reserva&metodo=create">Cadastrar</a>
           <a class="dropdown-item" href="listarRes.php?classe=reserva&metodo=index">Listar</a>
         </div>
 
