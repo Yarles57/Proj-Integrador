@@ -1,5 +1,6 @@
 <?php
-require_once "../Model/laboratorioModel.class.php";
+  require_once "../Model/laboratorioModel.class.php";
+
   session_start();
   if(!empty( $_SESSION['laboratorios'])){
      $lab = $_SESSION['laboratorios'];
@@ -159,10 +160,6 @@ require_once "../Model/laboratorioModel.class.php";
                   </tr>
                 </tfoot>
 
-
-
-
-
        <?php
           foreach($lab as $aux){
             echo "<tr>";
@@ -232,7 +229,7 @@ require_once "../Model/laboratorioModel.class.php";
         e.preventDefault();
         var delid = $(this).attr("delid");
 
-        if (confirm('Deseja deletar esse Laboratório')) {
+        if (confirm('Deseja deletar esse Laboratório?')) {
             window.location.replace("../index.php?classe=laboratorio&metodo=delete&id="+delid);
         }
       });
