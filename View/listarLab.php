@@ -6,7 +6,6 @@ require_once "../Model/laboratorioModel.class.php";
   }
   else{
     header("Location: ../indexProf.php");
-    # code...
   }
 ?>
 
@@ -162,8 +161,11 @@ require_once "../Model/laboratorioModel.class.php";
                   </tr>
                 </tfoot>
 
+
+
+
+
        <?php
-       // die(" Ok ");
           foreach($lab as $aux){
             echo "<tr>";
             echo "<td>{$aux->getNomeLab()}</td>";
@@ -173,9 +175,10 @@ require_once "../Model/laboratorioModel.class.php";
             echo "<td>{$aux->getQtdComputadores()}</td>";
            
                 
-            echo '<td><a href="../index.php?classe=laboratorio&metodo=edit&id='.$aux->getIdLab().'">Editar</a></td>';          
+            echo '<td><a href="../index.php?classe=laboratorio&metodo=edit&id='.$aux->getIdLab().'">Editar</a></td>'; 
 
-            echo '<td><a href="../index.php?classe=laboratorio&metodo=delete&id='.$aux->getIdLab().'">Deletar</a></td>';
+            echo '<td><a href="../index.php?classe=laboratorio&metodo=delete&id='.$aux->getIdLab().'" data-toggle="modal" data-target="#deletar">Deletar</a></td>';
+
             echo "</tr>";
             
           }
@@ -183,11 +186,30 @@ require_once "../Model/laboratorioModel.class.php";
 
       </table>
 
-
      <a href="../index.php?classe=laboratorio&metodo=create">Adicionar</a>
 
-     <!-- Bootstrap core JavaScript-->
+    <!-- Logout Modal-->
+    <div class="modal fade" id="deletar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Deletar Regitro</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Deseja deletar registro?</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            <a class="btn btn-primary" href="">Sim</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
+  
   <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
