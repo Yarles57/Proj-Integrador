@@ -21,9 +21,6 @@
 			header('Location: View/listarProf.php');
 
         }
-        
-
-
 		}
 		
 		public function inicio(){
