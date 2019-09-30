@@ -139,7 +139,7 @@
                 </div>
                 <div class="mr-5">Gerenciar Laboratórios</div>
 
-              <!-- Imagem                  -->
+              <!-- Imagem -->
               <div class="circle">
                 <img src="../imagens/computer.png">
               </div>
