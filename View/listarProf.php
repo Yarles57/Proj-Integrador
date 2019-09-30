@@ -172,7 +172,7 @@
             echo "<td>{$aux->getEmailProf()}</td>";
 
             echo '<td><a href="../indexProf.php?classe=professor&metodo=edit&id='.$aux->getIdProf().'">Editar</a></td>';
-            echo '<td><a href="../indexProf.php?classe=professor&metodo=delete&id='.$aux->getIdProf().'">Deletar</a></td>';
+            echo '<td><a class="delete" delid="'.$aux->getIdLab().'" href="../indexProf.php?classe=professor&metodo=delete&id='.$aux->getIdProf().'">Deletar</a></td>';
             echo "</tr>";
             
           }
@@ -182,6 +182,8 @@
 
 
      <a href="../indexProf.php?classe=professor&metodo=create">Adicionar</a>
+
+       
 
      <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
@@ -202,7 +204,18 @@
   <script src="../js/demo/datatables-demo.js"></script>
   <script src="../js/demo/chart-area-demo.js"></script>
       
-   
+   <script>
+    $(function(){
+      $(".delete").on('click', function(e) {
+        e.preventDefault();
+        var delid = $(this).attr("delid");
+
+        if (confirm('Deseja deletar esse Laboratório')) {
+            window.location.replace("../index.php?classe=laboratorio&metodo=delete&id="+delid);
+        }
+      });
+    });
+  </script> 
 
   </body>
 

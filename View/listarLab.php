@@ -6,7 +6,6 @@ require_once "../Model/laboratorioModel.class.php";
   }
   else{
     header("Location: ../indexProf.php");
-    # code...
   }
 ?>
 
@@ -133,7 +132,6 @@ require_once "../Model/laboratorioModel.class.php";
           </li>
           <li class="breadcrumb-item active">Listar Laboratórios</li>
         </ol>
-
     <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
@@ -161,8 +159,11 @@ require_once "../Model/laboratorioModel.class.php";
                   </tr>
                 </tfoot>
 
+
+
+
+
        <?php
-       // die(" Ok ");
           foreach($lab as $aux){
             echo "<tr>";
             echo "<td>{$aux->getNomeLab()}</td>";
@@ -172,21 +173,21 @@ require_once "../Model/laboratorioModel.class.php";
             echo "<td>{$aux->getQtdComputadores()}</td>";
            
                 
-            echo '<td><a href="../index.php?classe=laboratorio&metodo=edit&id='.$aux->getIdLab().'">Editar</a></td>';          
+            echo '<td><a href="../index.php?classe=laboratorio&metodo=edit&id='.$aux->getIdLab().'">Editar</a></td>'; 
 
-            echo '<td><a href="../index.php?classe=laboratorio&metodo=delete&id='.$aux->getIdLab().'">Deletar</a></td>';
+            echo '<td><a class="delete" delid="'.$aux->getIdLab().'" href="../index.php?classe=laboratorio&metodo=delete&id='.$aux->getIdLab().'">Deletar</a></td>';
             echo "</tr>";
             
           }
         ?>
 
       </table>
-
-
      <a href="../index.php?classe=laboratorio&metodo=create">Adicionar</a>
+    
 
-     <!-- Bootstrap core JavaScript-->
+  <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
+  
   <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
@@ -198,13 +199,24 @@ require_once "../Model/laboratorioModel.class.php";
   <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="../js/sb-admin.min.js"></script>
+  <script src="../js/sb-admin.js"></script>
 
   <!-- Demo scripts for this page-->
   <script src="../js/demo/datatables-demo.js"></script>
   <script src="../js/demo/chart-area-demo.js"></script>
       
-   
+  <script>
+    $(function(){
+      $(".delete").on('click', function(e) {
+        e.preventDefault();
+        var delid = $(this).attr("delid");
+
+        if (confirm('Deseja deletar esse Laboratório')) {
+            window.location.replace("../index.php?classe=laboratorio&metodo=delete&id="+delid);
+        }
+      });
+    });
+  </script>   
 
   </body>
 
