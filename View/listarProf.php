@@ -159,7 +159,7 @@
                     <th>Celular</th>
                     <th>Email</th> 
                     <th>Editar</th>
-                    <th>Excluir</th>    
+                    <th>Excluir</th>
                   </tr>
                 </tfoot>
 
@@ -171,9 +171,12 @@
             echo "<td>{$aux->getCelProf()}</td>";
             echo "<td>{$aux->getEmailProf()}</td>";
 
-            echo '<td><a href="../indexProf.php?classe=professor&metodo=edit&id='.$aux->getIdProf().'">Editar</a></td>';
-            echo '<td><a class="delete" delid="'.$aux->getIdLab().'" href="../indexProf.php?classe=professor&metodo=delete&id='.$aux->getIdProf().'">Deletar</a></td>';
-            echo "</tr>";
+             echo '<td><a href="../indexProf.php?classe=professor&metodo=edit&id='.$aux->getIdProf().'"> Editar</a></td>';
+
+             echo '<td><a class="delete" delid="'.$aux->getIdProf().'" href="../index.php?classe=professor&metodo=delete&id='.$aux->getIdProf().'"> Excluir </a></td>';
+             
+
+            echo '</tr>';
             
           }
         ?>
@@ -210,8 +213,8 @@
         e.preventDefault();
         var delid = $(this).attr("delid");
 
-        if (confirm('Deseja deletar esse Laboratório')) {
-            window.location.replace("../index.php?classe=laboratorio&metodo=delete&id="+delid);
+        if (confirm('Deseja deletar esse Professor')) {
+            window.location.replace("../indexProf.php?classe=professor&metodo=delete&id="+delid);
         }
       });
     });
