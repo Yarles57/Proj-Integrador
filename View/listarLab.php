@@ -171,7 +171,7 @@
            
                 
             echo '<td><a href="../index.php?classe=laboratorio&metodo=edit&id='.$aux->getIdLab().'">Editar</a></td>'; 
-
+            
             echo '<td><a class="delete" delid="'.$aux->getIdLab().'" href="../index.php?classe=laboratorio&metodo=delete&id='.$aux->getIdLab().'">Deletar</a></td>';
             echo "</tr>";
             

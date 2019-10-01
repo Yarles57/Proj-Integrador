@@ -19,7 +19,6 @@
 			header('Location: View/listarProf.php');
 
         }
-		}
 		
 		public function inicio(){
 			header("Location: View/dashboard.php");
