@@ -147,6 +147,7 @@
 
 
 
+              
               <a class="card-footer text-white clearfix small z-1" href="cadasLab.php?classe=laboratorio&metodo=create">
                 <span class="float-left">Cadastrar Laboratório</span>
                 <span class="float-right">
