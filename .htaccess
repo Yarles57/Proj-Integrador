@@ -4,4 +4,13 @@ RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
 
-RewriteRule ^(.*)$ index.php [NC,L,QSA]
+RewriteRule ^([a-z]+)/([a-z]+)$ http://localhost/Proj-Integrador/index.php?classe=$1&metodo=$2 [NC]
+RewriteRule ^([a-z]+)/([a-z]+)/$ http://localhost/Proj-Integrador/index.php?classe=$1&metodo=$2 [NC]
+RewriteRule ^([a-z]+)/([a-z]+)/([0-9]+)$ http://Proj-Integrador/loja10/index.php?classe=$1&metodo=$2&id=$3 [NC]
+RewriteRule ^([a-z]+)/([a-z]+)/([0-9]+)/$ http://Proj-Integrador/loja10/index.php?classe=$1&metodo=$2&id=$3 [NC,L]
+
+#RewriteRule ^(.*)$ index.php [NC,L,QSA]
+#RewriteRule ^([a-z]+)/([a-z]+)$ http://localhost/loja10/index.php?classe=$1&metodo=$2 [NC]
+#RewriteRule ^([a-z]+)/([a-z]+)/$ http://localhost/loja10/index.php?classe=$1&metodo=$2 [NC]
+#RewriteRule ^([a-z]+)/([a-z]+)/([0-9]+)$ http://localhost/loja10/index.php?classe=$1&metodo=$2&id=$3 [NC]
+#RewriteRule ^([a-z]+)/([a-z]+)/([0-9]+)/$ http://localhost/loja10/index.php?classe=$1&metodo=$2&id=$3 [NC,L]
