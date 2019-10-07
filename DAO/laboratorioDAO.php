@@ -7,7 +7,7 @@
 		public function listarTudo(){
 
 			$pdo = Database::conexao(); //Variavel que armazena a conexão do banco
-			$result = $pdo->query("SELECT * FROM laboratorio");
+			$result = $pdo->query("SELECT * FROM tb_laboratorio");
 			$linhas = $result->fetchAll(PDO::FETCH_ASSOC);
 			
 			for($i = 0; $i<count($linhas); $i++){
@@ -25,7 +25,7 @@
 
 			$labId = $_GET['id'];
 			$pdo = Database::conexao();
-			$result = $pdo->query("SELECT * FROM laboratorio WHERE idLab='$labId'");
+			$result = $pdo->query("SELECT * FROM tb_laboratorio WHERE idLab='$labId'");
 			$linha = $result->fetchAll(PDO::FETCH_ASSOC);
 
 			return $linha;
@@ -38,7 +38,7 @@
 			$codigoLaboratorio = $laboratorio->getCodLab();
 			$qtdComputadoresLab = $laboratorio->getQtdComputadores();
 
-			$query = "INSERT INTO laboratorio (nomeLab, codLab, qtdcompLab) VALUES (?,?,?)";
+			$query = "INSERT INTO tb_laboratorio (nomeLab, codLab, qtdcompLab) VALUES (?,?,?)";
 
     		$stmt = $pdo->prepare($query);
     		$stmt->bindParam(1, $nomeLaboratorio);
@@ -56,7 +56,7 @@
 			$nomeLaboratorio = $laboratorio->getNomeLab();
 			$codigoLaboratorio = $laboratorio->getCodLab();
 			$qtd = 	$laboratorio->getQtdComputadores();
-			$query = "UPDATE laboratorio SET nomeLab=?, codLab=?, qtdcompLab=? WHERE idLab=?";
+			$query = "UPDATE tb_laboratorio SET nomeLab=?, codLab=?, qtdcompLab=? WHERE idLab=?";
     		$stmt = $pdo->prepare($query);
     		$stmt->bindParam(1, $nomeLaboratorio);
     		$stmt->bindParam(2, $codigoLaboratorio);
@@ -70,7 +70,7 @@
 			public function deleta($id){
 
 			$pdo = Database::conexao();
-			$query = ("DELETE FROM laboratorio WHERE idLab=?");
+			$query = ("DELETE FROM tb_laboratorio WHERE idLab=?");
 			$stmt = $pdo->prepare($query);
     		$stmt->bindParam(1, $id);
     		$ok = $stmt->execute();
