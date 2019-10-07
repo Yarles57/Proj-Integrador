@@ -604,6 +604,29 @@ pre code {
 
 }
 
+.lista{
+  text-align: center;
+}
+#card-body0{
+  position:absolute;
+    left:50%;
+    top:50%;
+    margin-left:-110px;
+    margin-top:-40px;
+    width: 50%;
+
+}
+
+#card-body1{
+  float: left;
+  width: 50%;
+  margin-top: 3%;
+}
+#card-body{
+  float: left;
+  margin-top: 3%;
+}
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0;
@@ -10881,21 +10904,25 @@ body {
   color: #777;
 }
 
-footer.sticky-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+footer.sticky-footer  { 
+
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 0;
-  width: calc(100% - 90px);
-  height: 80px;
+  width: 100% !important;
+  height: 30px;
   background-color: #e9ecef;
+  margin-top: 50%;
+
 }
 
 footer.sticky-footer .copyright {
   line-height: 1;
   font-size: 0.8rem;
+  margin-top: 50%;
+}
+div.footer{
+text-align: center;
 }
 
 @media (min-width: 768px) {
