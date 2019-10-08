@@ -34,7 +34,7 @@
 		public function insere($disciplina){
 			$pdo = Database::conexao();
 
-			$nomeDisciplina = $disciplina->getNomeDis();
+			$nomeDisciplina = $disciplina->getNomeDisc();
 			$siglaDisciplina = $disciplina->getSiglaDisc();
 			$cursoDisciplina = $disciplina->getCursoDisc();
 
