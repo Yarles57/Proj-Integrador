@@ -134,8 +134,8 @@
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
          
           <h6 class="dropdown-header">Gerenciar Disciplina:</h6>
-          <a class="dropdown-item" href="cadasDisc.php?classe=disc&metodo=create">Cadastrar</a>
-          <a class="dropdown-item" href="listarDisc.php?classe=disc&metodo=index">Listar</a>
+          <a class="dropdown-item" href="cadasDisc.php?classe=disciplina&metodo=create">Cadastrar</a>
+          <a class="dropdown-item" href="listarDisc.php?classe=disciplina&metodo=index">Listar</a>
           <div class="dropdown-divider"></div>
         </div>
 
