@@ -7,7 +7,7 @@
 		public function listarTudo(){
 			$pdo = Database::conexao(); //Variavel que armazena a conexão do banco
 			
-			$result = $pdo->query("SELECT * FROM tb_cursos");
+			$result = $pdo->query("SELECT * FROM tb_curso");
 			$linhas = $result->fetchAll(PDO::FETCH_ASSOC);
 			
 			for($i = 0; $i<count($linhas); $i++){

@@ -4,6 +4,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+    <!-- Custom fonts for this template-->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/sb-img.css" rel="stylesheet">
+
    <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
@@ -123,7 +130,7 @@
          
           <h6 class="dropdown-header">Gerenciar Curso:</h6>
           <a class="dropdown-item" href="cadasCurso.php?classe=curso&metodo=create">Cadastrar</a>
-          <a class="dropdown-item" href="listarCurso.php?classe=curso&metodo=index">Listar</a>
+          <a class="dropdown-item" href="listarCursos.php?classe=cursos&metodo=index">Listar</a>
           <div class="dropdown-divider"></div>
         </div>
 
@@ -141,8 +148,8 @@
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
          
           <h6 class="dropdown-header">Gerenciar Disciplina:</h6>
-          <a class="dropdown-item" href="cadasDisc.php?classe=disc&metodo=create">Cadastrar</a>
-          <a class="dropdown-item" href="listarDisc.php?classe=disc&metodo=index">Listar</a>
+          <a class="dropdown-item" href="cadasDisc.php?classe=disciplina&metodo=create">Cadastrar</a>
+          <a class="dropdown-item" href="listarDisc.php?classe=disciplina&metodo=index">Listar</a>
           <div class="dropdown-divider"></div>
         </div>
 
@@ -160,9 +167,19 @@
           <li class="breadcrumb-item">
             <a href="dashboard.php">Painel de Controle </a>
           </li>
+      
+   <script>
+    $(function(){
+      $(".delete").on('click', function(e) {
+        e.preventDefault();
+        var delid = $(this).attr("delid");
 
-
-
+        if (confirm('Deseja deletar esse Professor')) {
+            window.location.replace("../indexProf.php?classe=professor&metodo=delete&id="+delid);
+        }
+      });
+    });
+  </script> 
 
      <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
@@ -186,3 +203,4 @@
    <!-- Custom mask input-->
    <script src="../js/demo/mask.js"> </script> 
   <script src="../js/demo/form.js"></script>
+

@@ -45,7 +45,7 @@
 		public function edit($id){
 			//atraves do ID seleciona os dados do registro e envia pela SESSION para o editarLab.php da View
 
-			$curso = $this->laboratorioDAO->listaRegistro($id);
+			$curso = $this->cursoDAO->listaRegistro($id);
 			session_start();
 			$_SESSION['editaCurso'] = $curso;
 
@@ -62,10 +62,11 @@
 			$nomeCurso = $_POST['nomeCurso'];
 	        $siglaCurso = $_POST['siglaCurso'];
 	        
+	        $this->curso->setIdCurso($idCurso);
 	        $this->curso->setNomeCurso($nomeCurso);
 	        $this->curso->setSiglaCurso($siglaCurso);
 	        $this->cursoDAO->atualizar($this->curso);
-
+	      
 	        $this->index();
 		}
 

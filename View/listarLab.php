@@ -21,7 +21,7 @@
   <body id="page-top">
     <?php
     include "menu/menu.php";
-  ?>
+    ?>
           <li class="breadcrumb-item active"> / Listar Laboratórios</li>
         </ol>
     <div class="card mb-3">
@@ -72,40 +72,6 @@
       </table>
      <a href="../index.php?classe=laboratorio&metodo=create">Adicionar</a>
     
-
-  <!-- Bootstrap core JavaScript-->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Core plugin JavaScript-->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Page level plugin JavaScript-->
-  <script src="../vendor/chart.js/Chart.min.js"></script>
-  <script src="../vendor/datatables/jquery.dataTables.js"></script>
-  <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
-
-  <!-- Custom scripts for all pages-->
-  <script src="../js/sb-admin.js"></script>
-
-  <!-- Demo scripts for this page-->
-  <script src="../js/demo/datatables-demo.js"></script>
-  <script src="../js/demo/chart-area-demo.js"></script>
-      
-  <script>
-    $(function(){
-      $(".delete").on('click', function(e) {
-        e.preventDefault();
-        var delid = $(this).attr("delid");
-
-        if (confirm('Deseja deletar esse Laboratório?')) {
-            window.location.replace("../index.php?classe=laboratorio&metodo=delete&id="+delid);
-        }
-      });
-    });
-  </script>   
-
   </body>
 
 </html>

@@ -61,6 +61,7 @@
 			$nomeLaboratorio = $_POST['nomeLaboratorio'];
 	        $codigoLaboratorio = $_POST['codigoLab'];
 	        $qtd = $_POST['qtdcomp'];
+	        
 	        $this->laboratorio->setIdLab($idLaboratorio);
 	        $this->laboratorio->setNomeLab($nomeLaboratorio);
 	        $this->laboratorio->setCodLab($codigoLaboratorio);

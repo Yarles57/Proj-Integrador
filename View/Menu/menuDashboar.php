@@ -13,7 +13,6 @@
 
 
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-    <a class="navbar-brand mr-1" href="dashboard.php"></a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="../dashboard.php">
       <i class="fas fa-bars"></i>
@@ -50,13 +49,6 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-      
-      <li class="nav-item active">
-        <a class="nav-link" href="dashboard.php">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Painel de Controle</span>
-        </a>
-      </li>
 
       <!---------------------------------- Laboratório  -------------------------------->
       <li class="nav-item dropdown">
@@ -124,7 +116,7 @@
          
           <h6 class="dropdown-header">Gerenciar Curso:</h6>
           <a class="dropdown-item" href="cadasCurso.php?classe=curso&metodo=create">Cadastrar</a>
-          <a class="dropdown-item" href="listarCurso.php?classe=curso&metodo=index">Listar</a>
+          <a class="dropdown-item" href="listarCursos.php?classe=cursos&metodo=index">Listar</a>
           <div class="dropdown-divider"></div>
         </div>
 
@@ -142,8 +134,8 @@
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
          
           <h6 class="dropdown-header">Gerenciar Disciplina:</h6>
-          <a class="dropdown-item" href="cadasDisc.php?classe=disc&metodo=create">Cadastrar</a>
-          <a class="dropdown-item" href="listarDisc.php?classe=disc&metodo=index">Listar</a>
+          <a class="dropdown-item" href="cadasDisc.php?classe=disciplina&metodo=create">Cadastrar</a>
+          <a class="dropdown-item" href="listarDisc.php?classe=disciplina&metodo=index">Listar</a>
           <div class="dropdown-divider"></div>
         </div>
 
