@@ -13,7 +13,6 @@
 
 
 <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-    <a class="navbar-brand mr-1" href="dashboard.php"></a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="../dashboard.php">
       <i class="fas fa-bars"></i>
@@ -50,13 +49,6 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
-      
-      <li class="nav-item active">
-        <a class="nav-link" href="dashboard.php">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Painel de Controle</span>
-        </a>
-      </li>
 
       <!---------------------------------- Laboratório  -------------------------------->
       <li class="nav-item dropdown">
