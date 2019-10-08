@@ -1,10 +1,11 @@
 <?php
-
+require_once "Model/cursoModel.php";
 class Disciplina{
     private $idDisc;
-    private $cursoDisc;
+   // private $cursoDisc;
     private $nomeDisc;
     private $siglaDisc;
+    private Curso $idCurso;
 
     public function getIdDisc(){
         return $this->idDisc;
@@ -38,4 +39,13 @@ class Disciplina{
         $this->cursoDisc = $cursoDisc;
     }
 
+    public function getIdCurso()
+    {
+        return $this->idCurso;
+    }
+    
+    public function setIdCurso(Curso $idCurso)
+    {
+        return $this->idCurso = $idCurso;
+    }
 }
