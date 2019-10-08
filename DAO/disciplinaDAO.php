@@ -50,7 +50,7 @@
     		header("Location: View/listarDisc.php");
 		}
 
-		public function atualizar($Disciplina){
+		public function atualizar($disciplina){
 			$pdo = Database::conexao();			
 			$idDisciplina = $disciplina->getIdDisc();
 			$nomeDisciplina = $disciplina->getNomeDisc();
