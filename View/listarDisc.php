@@ -6,7 +6,7 @@
      $disc = $_SESSION['disciplinas'];
   }
   else{
-    header("Location: ../indexDisc.php");
+    //header("Location: ../indexDisc.php");
   }
 ?>
 
@@ -66,7 +66,7 @@
         ?>
 
       </table>
-     <a href="../indexCurso.php?classe=curso&metodo=create">Adicionar</a>
+     <a href="../indexCurso.php?classe=disciplina&metodo=create">Adicionar</a>
     
 
   
