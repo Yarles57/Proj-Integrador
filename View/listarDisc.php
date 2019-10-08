@@ -57,7 +57,7 @@
             echo "<td>{$aux->getSiglaDisc()}</td>";
            
                 
-            echo '<td><a href="../indexCurso.php?classe=curso&metodo=edit&id='.$aux->getIdDisc().'">Editar</a></td>'; 
+            echo '<td><a href="../indexDisc.php?classe=curso&metodo=edit&id='.$aux->getIdDisc().'">Editar</a></td>'; 
             
             echo '<td><a class="delete" delid="'.$aux->getIdDisc().'" href="../indexCurso.php?classe=curso&metodo=delete&id='.$aux->getIdDisc().'">Deletar</a></td>';
             echo "</tr>";
