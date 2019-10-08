@@ -15,7 +15,6 @@ require_once "DAO/disciplinaDAO.php";
 			$disc = $this->disciplinaDAO->listarTudo();
 			session_start();
 			$_SESSION['disciplinas'] = $disc;
-
 			header('Location: View/listarDisc.php');
 
         }
