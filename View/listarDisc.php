@@ -3,7 +3,7 @@
 
   session_start();
   if(!empty( $_SESSION['disciplinas'])){
-     $lab = $_SESSION['disciplinas'];
+     $disc = $_SESSION['disciplinas'];
   }
   else{
     header("Location: ../indexDisc.php");
@@ -14,7 +14,7 @@
 <html>
   <head>
 
-    <title>SisRes - Listar Disc</title>
+    <title>ResLab</title>
 
   </head>
 
@@ -22,8 +22,8 @@
     <?php
     include "menu/menu.php";
     ?>
-          <li class="breadcrumb-item active"> / Listar Disciplinas</li>
-        </ol>
+    <li class="breadcrumb-item active">Listar Laboratórios</li>
+  </ol>
     <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-table"></i>
@@ -35,7 +35,6 @@
                   <tr>
                     <th>Nome</th>     
                     <th>Sigla</th>
-                    <th>Curso</th> 
                     <th>Editar</th>
                     <th>Excluir</th>   
                   </tr>
@@ -45,33 +44,46 @@
                   <tr>
                     <th>Nome</th>     
                     <th>Sigla</th>
-                    <th>Curso</th> 
                     <th>Editar</th>
-                    <th>Excluir</th>    
+                    <th>Excluir</th>   
                   </tr>
                 </tfoot>
 
        <?php
-          foreach($lab as $aux){
+          foreach($disc as $aux){
             echo "<tr>";
             echo "<td>{$aux->getNomeDisc()}</td>";
 
             echo "<td>{$aux->getSiglaDisc()}</td>";
-
-            echo "<td>{$aux->getCursoDisc()}</td>";
            
                 
-            echo '<td><a href="../indexDisc.php?classe=disciplina&metodo=edit&id='.$aux->getIdDisc().'">Editar</a></td>'; 
+            echo '<td><a href="../indexCurso.php?classe=curso&metodo=edit&id='.$aux->getIdDisc().'">Editar</a></td>'; 
             
-            echo '<td><a class="delete" delid="'.$aux->getIdDisc().'" href="../indexDisc.php?classe=disciplina&metodo=delete&id='.$aux->getIdDisc().'">Deletar</a></td>';
+            echo '<td><a class="delete" delid="'.$aux->getIdDisc().'" href="../indexCurso.php?classe=curso&metodo=delete&id='.$aux->getIdDisc().'">Deletar</a></td>';
             echo "</tr>";
             
           }
         ?>
 
       </table>
-     <a href="../indexDisc.php?classe=disciplina&metodo=create">Adicionar</a>
+     <a href="../indexCurso.php?classe=curso&metodo=create">Adicionar</a>
     
+
+  
+      
+  <script>
+    $(function(){
+      $(".delete").on('click', function(e) {
+        e.preventDefault();
+        var delid = $(this).attr("delid");
+
+        if (confirm('Deseja deletar esse Curso?')) {
+            window.location.replace("../indexCurso.php?classe=curso&metodo=delete&id="+delid);
+        }
+      });
+    });
+  </script>   
+
   </body>
 
 </html>

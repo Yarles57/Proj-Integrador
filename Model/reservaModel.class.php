@@ -1,4 +1,5 @@
 <?php
+require_once "Model/reservaModel.class.php";
 
     class Reserva{
         private $idReserva;
@@ -59,7 +60,14 @@
             return $this->justificativaReserva = $justificativaReserva;
         }
 
-        public function Curso getIdCurso(){
-            
+
+        public function getIdCurso()
+        {
+            return $this->idCurso;
         }
+        
+        public function setIdCurso(Curso $idCurso)
+        {
+            return $this->idCurso = $idCurso;
+        }idCurso
     }
