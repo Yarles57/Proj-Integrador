@@ -56,6 +56,7 @@
            
                 
             echo '<td><a href="../indexDisc.php?classe=disciplina&metodo=edit&id='.$aux->getIdDisc().'">Editar</a></td>'; 
+            echo '<td><a href="../indexDisc.php?classe=curso&metodo=edit&id='.$aux->getIdDisc().'">Editar</a></td>'; 
             
             echo '<td><a class="delete" delid="'.$aux->getIdDisc().'" href="../indexDisc.php?classe=disciplina&metodo=delete&id='.$aux->getIdDisc().'">Deletar</a></td>';
             echo "</tr>";
@@ -65,9 +66,8 @@
 
       </table>
      <a href="../indexDisc.php?classe=disciplina&metodo=create">Adicionar</a>
-    
+     <a href="../indexCurso.php?classe=disciplina&metodo=create">Adicionar</a>    
 
-  
       
   <script>
     $(function(){
