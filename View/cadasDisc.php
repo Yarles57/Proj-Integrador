@@ -38,7 +38,7 @@
             
 			  <select class="btn btn-info dropdown-toggle" name ="cursoDisc">
 			    <option selected="selected"  > Curso da Disciplina</option>
-			    <option value="bsis"  name ="cursoDisc" >BSI</option>
+			    <option value="bsis" >BSI</option>
 			    <option value="lfis" >Física</option>
 			    <option value="tmec" >Mecatronica</option>
 			    <option value="lmat" >Matemática</option>
