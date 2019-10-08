@@ -54,7 +54,8 @@
                 <input input type="number" min="1" max="30" id="inputEmail" class="form-control" placeholder="Quantidade de Computadores" name="qtdComputadores" required="on">
                 <label for="inputEmail">Quantidade de Computadores</label>
               </div>
-            </div>        
+            </div>
+
         </div>
         
         <input type="hidden" name="metodo" value="store">

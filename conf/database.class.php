@@ -4,7 +4,7 @@
 		protected static $db;
 		private function __construct(){
 			$db_host = "localhost";
-			$db_nome = "projetointegrador2";
+			$db_nome = "projintegrador2";
 			$db_usuario = "root";
 			$db_senha = "";
 			$db_driver = "mysql";
