@@ -3,7 +3,7 @@
 
   session_start();
   if(!empty( $_SESSION['disciplinas'])){
-     $disc = $_SESSION['disciplinas'];
+     $disciplinas = $_SESSION['disciplinas'];
   }
   else{
     //header("Location: ../indexDisc.php");
@@ -13,14 +13,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>ResLab</title>
+
   </head>
 
   <body id="page-top">
     <?php
     include "menu/menu.php";
     ?>
-    <li class="breadcrumb-item active">Listar Disciplinas</li>
+    <li class="breadcrumb-item active">Listar Laboratórios</li>
   </ol>
     <div class="card mb-3">
           <div class="card-header">
@@ -48,7 +50,7 @@
                 </tfoot>
 
        <?php
-          foreach($disc as $aux){
+          foreach($disciplinas as $aux){
             echo "<tr>";
             echo "<td>{$aux->getNomeDisc()}</td>";
 
@@ -56,9 +58,8 @@
            
                 
             echo '<td><a href="../indexDisc.php?classe=disciplina&metodo=edit&id='.$aux->getIdDisc().'">Editar</a></td>'; 
-            echo '<td><a href="../indexDisc.php?classe=curso&metodo=edit&id='.$aux->getIdDisc().'">Editar</a></td>'; 
             
-            echo '<td><a class="delete" delid="'.$aux->getIdDisc().'" href="../indexDisc.php?classe=disciplina&metodo=delete&id='.$aux->getIdDisc().'">Deletar</a></td>';
+            echo '<td><a class="delete" delid="'.$aux->getIdDisc().'" href="../indexCurso.php?classe=disciplina&metodo=delete&id='.$aux->getIdDisc().'">Deletar</a></td>';
             echo "</tr>";
             
           }
@@ -66,8 +67,9 @@
 
       </table>
      <a href="../indexDisc.php?classe=disciplina&metodo=create">Adicionar</a>
-     <a href="../indexCurso.php?classe=disciplina&metodo=create">Adicionar</a>    
+    
 
+  
       
   <script>
     $(function(){
@@ -76,7 +78,7 @@
         var delid = $(this).attr("delid");
 
         if (confirm('Deseja deletar esse Curso?')) {
-            window.location.replace("../indexCurso.php?classe=curso&metodo=delete&id="+delid);
+            window.location.replace("../indexDisc.php?classe=disciplina&metodo=delete&id="+delid);
         }
       });
     });
