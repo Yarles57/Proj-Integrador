@@ -2,33 +2,16 @@
 
     class Disciplina{
         private $idDisc;
-        private $cursoDisc;
+        private $cursoDisc; //$cursoDisc recebe o nomeDisc enviado pelo <option>
         private $nomeDisc;
         private $siglaDisc;
-        //private Curso $idCurso;
 
         public function getIdDisc(){
             return $this->idDisc;
         }
         
         public function setIdDisc($idDisc){
-            $this->idDisc = $idDisc;
-        }
-
-        public function getNomeDisc(){
-            return $this->nomeDisc;
-        }
-        
-        public function setNomeDisc($nomeDisc){
-            $this->nomeDisc = $nomeDisc;
-        }
-
-        public function getSiglaDisc(){
-            return $this->siglaDisc;
-        }
-        
-        public function setSiglaDisc($siglaDisc){
-            $this->siglaDisc = $siglaDisc;
+            return $this->idDisc = $idDisc;
         }
 
         public function getCursoDisc(){
@@ -36,16 +19,22 @@
         }
         
         public function setCursoDisc($cursoDisc){
-            $this->cursoDisc = $cursoDisc;
+            return $this->cursoDisc = $cursoDisc;
         }
 
-        public function getIdCurso()
-        {
-            return $this->idCurso;
+        public function getNomeDisc(){
+            return $this->nomeDisc;
         }
         
-        public function setIdCurso(Curso $idCurso)
-        {
-            return $this->idCurso = $idCurso;
+        public function setNomeDisc($nomeDisc){
+            return $this->nomeDisc = $nomeDisc;
+        }
+
+        public function getSiglaDisc(){
+            return $this->siglaDisc;
+        }
+        
+        public function setSiglaDisc($siglaDisc){
+            return $this->siglaDisc = $siglaDisc;
         }
 }
