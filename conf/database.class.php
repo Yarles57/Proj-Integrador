@@ -17,7 +17,7 @@
 				
 				self::$db->exec('SET NAMES utf8');
 			}catch(PDOException $e){
-				echo "PDOException em $sistema_titulo", $e->getMessge();
+				echo "PDOException em $sistema_titulo", $e->getMessage();
 				die("Connection Error: ".$e->getMessage());
 			}
 		}
