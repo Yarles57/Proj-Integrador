@@ -1,5 +1,5 @@
 <?php
-  require_once "../Model/disciplinaModel.class.php";
+  require_once "../Model/disciplinaModel.php";
 
   session_start();
   if(!empty( $_SESSION['disciplinas'])){
