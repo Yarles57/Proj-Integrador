@@ -12,9 +12,10 @@ require_once "DAO/disciplinaDAO.php";
 		}
 		
 		public function index(){
-			$disc = $this->disciplinaDAO->listarTudo();
+			$disciplinas = $this->disciplinaDAO->listarTudo();
 			session_start();
-			$_SESSION['disciplinas'] = $disc;
+			$_SESSION['disciplinas'] = $disciplinas;
+
 			header('Location: View/listarDisc.php');
 
         }
@@ -33,18 +34,17 @@ require_once "DAO/disciplinaDAO.php";
 			$siglaDisciplina = $_POST['siglaDisc'];
 	        $cursoDisciplina = $_POST['cursoDisc'];
 
-	        echo "$nomeDisciplina";
-	        echo "$siglaDisciplina";
-	        echo "$cursoDisciplina";
-
+	        echo "Nome da disciplina ".$nomeDisciplina."<br>";
+	        echo "Sigla da disciplina ".$siglaDisciplina."<br>";
+	        echo "Curso da disciplina ".$cursoDisciplina;
 
 	        $this->disciplina->setNomeDisc($nomeDisciplina);
 	        $this->disciplina->setSiglaDisc($siglaDisciplina);
-	        $this->disciplina->setCursoDisc($cursoDisciplina);
+			$this->disciplina->setCursoDisc($cursoDisciplina);
 
-	   
 	        $this->disciplinaDAO->insere($this->disciplina);
 	        $this->index();
+
 		}
 
 		public function edit($id){
