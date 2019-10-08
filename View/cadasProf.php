@@ -13,8 +13,8 @@
   <?php
     include "menu/menu.php";
   ?>
-          <li class="breadcrumb-item active"> / Cadastrar Professor</li>
-        </ol>
+    <li class="breadcrumb-item active"> / Cadastrar Professor</li>
+    </ol>
 
     <div class="container">
       
