@@ -113,14 +113,14 @@
                 </div>
               </div>
               
-              <a class="card-footer text-white clearfix small z-1" href="cadasLab.php?classe=laboratorio&metodo=create">
+              <a class="card-footer text-white clearfix small z-1" href="cadasCurso.php?classe=curso&metodo=create">
                 <span class="float-left">Cadastrar Curso</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
                 </span>
               </a>
 
-              <a class="card-footer text-white clearfix small z-1" href="listarLab.php?classe=laboratorio&metodo=index">
+              <a class="card-footer text-white clearfix small z-1" href="listarCurso.php?classe=curso&metodo=index">
                 <span class="float-left">Listar Curso</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
