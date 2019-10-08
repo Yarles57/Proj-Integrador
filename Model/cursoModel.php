@@ -11,7 +11,6 @@
 			$this->idCurso = $idCurso;
 		}
 
-
 		public function getNomeCurso(){
 			return $this->nomeCurso;
 		}

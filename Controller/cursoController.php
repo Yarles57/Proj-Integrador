@@ -62,10 +62,11 @@
 			$nomeCurso = $_POST['nomeCurso'];
 	        $siglaCurso = $_POST['siglaCurso'];
 	        
+	        $this->curso->setIdCurso($idCurso);
 	        $this->curso->setNomeCurso($nomeCurso);
 	        $this->curso->setSiglaCurso($siglaCurso);
 	        $this->cursoDAO->atualizar($this->curso);
-
+	      
 	        $this->index();
 		}
 
