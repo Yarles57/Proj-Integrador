@@ -1,4 +1,17 @@
-  <!DOCTYPE html>
+<?php
+  require_once "../Model/cursoModel.php";
+
+  session_start();
+  if(!empty( $_SESSION['cursos'])){
+     $cursos = $_SESSION['cursos'];
+  }
+  else{
+    //header("Location: ../indexCurso.php");
+  }
+?>
+
+
+<!DOCTYPE html>
 <html lang="PT-BR">
   <head>
   	<title>SisRes - Cadastrar Disciplina</title>
@@ -37,11 +50,13 @@
             </div>
             
 			  <select class="btn btn-info dropdown-toggle" name ="cursoDisc">
-			    <option selected="selected"  > Curso da Disciplina</option>
-			    <option value="1" >BSI</option>
-			    <option value="2" >Física</option>
-			    <option value="3" >Mecatronica</option>
-			    <option value="4" >Matemática</option>
+			    <option selected="selected"> Curso da Disciplina</option>
+          <?php
+            foreach ($cursos as $curso) {
+               echo "<option value='{$curso->getSiglaCurso()}' >{$curso->getNomeCurso()}</option>";
+            }
+           
+          ?>
 			  </select>
 
 
