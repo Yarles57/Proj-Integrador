@@ -4,6 +4,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+    <!-- Custom fonts for this template-->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="../css/sb-admin.css" rel="stylesheet">
+    <link href="../css/sb-img.css" rel="stylesheet">
+
    <!-- Custom fonts for this template-->
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
@@ -141,8 +148,8 @@
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
          
           <h6 class="dropdown-header">Gerenciar Disciplina:</h6>
-          <a class="dropdown-item" href="cadasDisc.php?classe=disc&metodo=create">Cadastrar</a>
-          <a class="dropdown-item" href="listarDisc.php?classe=disc&metodo=index">Listar</a>
+          <a class="dropdown-item" href="cadasDisc.php?classe=disciplina&metodo=create">Cadastrar</a>
+          <a class="dropdown-item" href="listarDisc.php?classe=disciplina&metodo=index">Listar</a>
           <div class="dropdown-divider"></div>
         </div>
 
