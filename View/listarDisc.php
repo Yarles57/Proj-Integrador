@@ -6,23 +6,21 @@
      $disc = $_SESSION['disciplinas'];
   }
   else{
-    header("Location: ../indexDisc.php");
+    //header("Location: ../indexDisc.php");
   }
 ?>
 
 <!DOCTYPE html>
 <html>
   <head>
-
     <title>ResLab</title>
-
   </head>
 
   <body id="page-top">
     <?php
     include "menu/menu.php";
     ?>
-    <li class="breadcrumb-item active">Listar Laboratórios</li>
+    <li class="breadcrumb-item active">Listar Disciplinas</li>
   </ol>
     <div class="card mb-3">
           <div class="card-header">
@@ -57,16 +55,16 @@
             echo "<td>{$aux->getSiglaDisc()}</td>";
            
                 
-            echo '<td><a href="../indexCurso.php?classe=curso&metodo=edit&id='.$aux->getIdDisc().'">Editar</a></td>'; 
+            echo '<td><a href="../indexDisc.php?classe=disciplina&metodo=edit&id='.$aux->getIdDisc().'">Editar</a></td>'; 
             
-            echo '<td><a class="delete" delid="'.$aux->getIdDisc().'" href="../indexCurso.php?classe=curso&metodo=delete&id='.$aux->getIdDisc().'">Deletar</a></td>';
+            echo '<td><a class="delete" delid="'.$aux->getIdDisc().'" href="../indexDisc.php?classe=disciplina&metodo=delete&id='.$aux->getIdDisc().'">Deletar</a></td>';
             echo "</tr>";
             
           }
         ?>
 
       </table>
-     <a href="../indexCurso.php?classe=curso&metodo=create">Adicionar</a>
+     <a href="../indexDisc.php?classe=disciplina&metodo=create">Adicionar</a>
     
 
   
