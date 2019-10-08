@@ -159,7 +159,7 @@
                 </tfoot>
 
        <?php
-          foreach($lab as $aux){
+          foreach($cursos as $aux){
             echo "<tr>";
             echo "<td>{$aux->getNomeCurso()}</td>";
 
@@ -168,7 +168,7 @@
                 
             echo '<td><a href="../indexCurso.php?classe=curso&metodo=edit&id='.$aux->getIdCurso().'">Editar</a></td>'; 
             
-            echo '<td><a class="delete" delid="'.$aux->getIdCurso().'" href="../indexCurso.php?classe=laboratorio&metodo=delete&id='.$aux->getIdCurso().'">Deletar</a></td>';
+            echo '<td><a class="delete" delid="'.$aux->getIdCurso().'" href="../indexCurso.php?classe=curso&metodo=delete&id='.$aux->getIdCurso().'">Deletar</a></td>';
             echo "</tr>";
             
           }
