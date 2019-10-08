@@ -9,7 +9,6 @@
   }
 
 ?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -65,8 +64,6 @@
              echo '<td><a href="../indexProf.php?classe=professor&metodo=edit&id='.$aux->getIdProf().'"> Editar</a></td>';
 
              echo '<td><a class="delete" delid="'.$aux->getIdProf().'" href="../index.php?classe=professor&metodo=delete&id='.$aux->getIdProf().'"> Excluir </a></td>';
-             
-
             echo '</tr>';
             
           }
