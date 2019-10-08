@@ -16,7 +16,8 @@
 				$disciplina[$i]->setIdDisc($linhas[$i]['idDisciplina']);
 				$disciplina[$i]->setNomeDis($linhas[$i]['nomeDisciplina']);
 				$disciplina[$i]->setSiglaDisc($linhas[$i]['siglaDisciplina']);
-				$disciplina[$i]->setCursoDisc($linhas[$i]['idCursoFk']);			
+				//$disciplina[$i]->setCursoDisc($linhas[$i]['']);
+
 			}	
 	  		return $disciplina;
 		}
@@ -38,12 +39,8 @@
 			$siglaDisciplina = $disciplina->getSiglaDisc();
 			$cursoDisciplina = $disciplina->getCursoDisc();
 
-			$query = "INSERT INTO tb_disciplina (nomeDisciplina, siglaDisciplina) VALUES (?,?)";
+			$query = "INSERT INTO tb_disciplina (nomeDisciplina, siglaDisciplina, idCursoFk) VALUES (?,?,?)";
 
-			$query2 = "BEGIN TRANSACTION
-						   INSERT INTO tb_disciplina (nomeDisciplina, siglaDisciplina) VALUES (?,?);
-						   INSERT INTO tb_curso() VALUES (..., LAST_INSERT_ID());
-						COMMIT"; 
 
     		$stmt = $pdo->prepare($query);
     		$stmt->bindParam(1, $nomeDisciplina);
