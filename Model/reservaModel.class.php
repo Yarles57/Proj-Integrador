@@ -1,5 +1,5 @@
 <?php
-require_once "Model/reservaModel.class.php";
+require_once "Model/cursoModel.class.php";
 
     class Reserva{
         private $idReserva;
