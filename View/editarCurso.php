@@ -2,8 +2,8 @@
   require_once "../Model/cursoModel.php";
   session_start();
   
-  if(!empty( $_SESSION['cursos'])){
-     $cursos = $_SESSION['cursos'];
+  if(!empty( $_SESSION['editaCurso'])){
+     $cursos = $_SESSION['editaCurso'];
   }
   else{
       header("Location: ../indexCurso.php");
@@ -36,7 +36,7 @@
         <div class="card-header">Editar Curso</div>
       <div class="card-body">
 
-        <form action="../index.php" method="post">
+        <form action="../indexCurso.php" method="post">
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
