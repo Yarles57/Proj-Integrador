@@ -9,57 +9,54 @@
         private Curso $idCurso;
     
 
-        public function getIdRes(){
-            return $this->idRes;
-        }
-
-        public function setIdRes($idRes){
-            $this->idRes = $idRes;
-        }
-
-
-        public function getDataRes(){
-            return $this->dataRes;
-        }
-
-        public function setDataRes($dataRes){
-            $this->dataRes = $dataRes;
-        }
-
-
-        public function getHoraRes(){
-            return $this->horaRes;
-        }
-
-        public function setHoraRes($horaRes){
-            $this->horaRes = $horaRes;
-        }
-
-
-        public function getIdProf(){
-            return $this->idProf;
-        }
-
-        public function setIdProf($idProf){
-            $this->idProf = $idProf;
-        }
-
-
-        public function getIdLab(){
-            return $this->idLab;
-        }
-
-        public function setIdLab($idLab){
-            $this->idLab = $idLab;
-        }
-
-
-        public function getIdAdmin(){
-            return $this->idAdmin;
-        }
-
-        public function setIdAdmin($idAdmin){
-            $this->idAdmin = $idAdmin;
+        public function getIdReserva()
+        {
+            return $this->idReserva;
         }
         
+        public function setIdReserva($idReserva)
+        {
+            return $this->idReserva = $idReserva;
+        }
+
+        public function getDataReserva()
+        {
+            return $this->dataReserva;
+        }
+        
+        public function setDataReserva($dataReserva)
+        {
+            return $this->dataReserva = $dataReserva;
+        }
+
+        public function getHoraReserva()
+        {
+            return $this->horaReserva;
+        }
+        
+        public function setHoraReserva($horaReserva)
+        {
+            return $this->horaReserva = $horaReserva;
+        }
+
+        public function getStatusReserva()
+        {
+            return $this->statusReserva;
+        }
+        
+        public function setStatusReserva($statusReserva)
+        {
+            return $this->statusReserva = $statusReserva;
+        }
+
+        public function getJustificativaReserva()
+        {
+            return $this->justificativaReserva;
+        }
+        
+        public function setJustificativaReserva($justificativaReserva)
+        {
+            return $this->justificativaReserva = $justificativaReserva;
+        }
+
     }
