@@ -50,10 +50,10 @@
             </div>
             
 			  <select class="btn btn-info dropdown-toggle" name ="cursoDisc">
-			    <option selected="selected"> Curso da Disciplina</option>
+			    <option selected="selected" name = "cursoDisc"> Curso da Disciplina</option>
           <?php
             foreach ($cursos as $curso) {
-               echo "<option value='{$curso->getSiglaCurso()}' >{$curso->getNomeCurso()}</option>";
+               echo "<option value='{$curso->getIdCurso()}' >{$curso->getNomeCurso()}</option>";
             }
            
           ?>
