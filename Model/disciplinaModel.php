@@ -1,51 +1,51 @@
 <?php
-require_once "Model/cursoModel.php";
-class Disciplina{
-    private $idDisc;
-   // private $cursoDisc;
-    private $nomeDisc;
-    private $siglaDisc;
-    //private Curso $idCurso;
 
-    public function getIdDisc(){
-        return $this->idDisc;
-    }
-    
-    public function setIdDisc($idDisc){
-        $this->idDisc = $idDisc;
-    }
+    class Disciplina{
+        private $idDisc;
+        private $cursoDisc;
+        private $nomeDisc;
+        private $siglaDisc;
+        //private Curso $idCurso;
 
-    public function getNomeDisc(){
-        return $this->nomeDisc;
-    }
-    
-    public function setNomeDisc($nomeDisc){
-        $this->nomeDisc = $nomeDisc;
-    }
+        public function getIdDisc(){
+            return $this->idDisc;
+        }
+        
+        public function setIdDisc($idDisc){
+            $this->idDisc = $idDisc;
+        }
 
-    public function getSiglaDisc(){
-        return $this->siglaDisc;
-    }
-    
-    public function setSiglaDisc($siglaDisc){
-        $this->siglaDisc = $siglaDisc;
-    }
+        public function getNomeDisc(){
+            return $this->nomeDisc;
+        }
+        
+        public function setNomeDisc($nomeDisc){
+            $this->nomeDisc = $nomeDisc;
+        }
 
-    public function getCursoDisc(){
-        return $this->cursoDisc;
-    }
-    
-    public function setCursoDisc($cursoDisc){
-        $this->cursoDisc = $cursoDisc;
-    }
+        public function getSiglaDisc(){
+            return $this->siglaDisc;
+        }
+        
+        public function setSiglaDisc($siglaDisc){
+            $this->siglaDisc = $siglaDisc;
+        }
 
-    public function getIdCurso()
-    {
-        return $this->idCurso;
-    }
-    
-    public function setIdCurso(Curso $idCurso)
-    {
-        return $this->idCurso = $idCurso;
-    }
+        public function getCursoDisc(){
+            return $this->cursoDisc;
+        }
+        
+        public function setCursoDisc($cursoDisc){
+            $this->cursoDisc = $cursoDisc;
+        }
+
+        public function getIdCurso()
+        {
+            return $this->idCurso;
+        }
+        
+        public function setIdCurso(Curso $idCurso)
+        {
+            return $this->idCurso = $idCurso;
+        }
 }
