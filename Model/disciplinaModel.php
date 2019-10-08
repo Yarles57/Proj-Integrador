@@ -5,7 +5,7 @@ class Disciplina{
    // private $cursoDisc;
     private $nomeDisc;
     private $siglaDisc;
-    private Curso $idCurso;
+    //private Curso $idCurso;
 
     public function getIdDisc(){
         return $this->idDisc;
