@@ -1,6 +1,6 @@
 <?php
 	require_once "conf/database.class.php";
-	require_once "Model/disciplinaModel.class.php";
+	require_once "Model/disciplinaModel.php";
 	
 	class DisciplinaDAO{
 
@@ -31,7 +31,7 @@
 			return $linha;
 		}
 
-		public function insere($Disciplina){
+		public function insere($disciplina){
 			$pdo = Database::conexao();
 
 			$nomeDisciplina = $disciplina->getNomeDis();
