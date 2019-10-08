@@ -120,7 +120,7 @@
                 </span>
               </a>
 
-              <a class="card-footer text-white clearfix small z-1" href="listarCurso.php?classe=curso&metodo=index">
+              <a class="card-footer text-white clearfix small z-1" href="listarCursos.php?classe=curso&metodo=index">
                 <span class="float-left">Listar Curso</span>
                 <span class="float-right">
                   <i class="fas fa-angle-right"></i>
