@@ -130,7 +130,7 @@
          
           <h6 class="dropdown-header">Gerenciar Curso:</h6>
           <a class="dropdown-item" href="cadasCurso.php?classe=curso&metodo=create">Cadastrar</a>
-          <a class="dropdown-item" href="listarCurso.php?classe=curso&metodo=index">Listar</a>
+          <a class="dropdown-item" href="listarCursos.php?classe=cursos&metodo=index">Listar</a>
           <div class="dropdown-divider"></div>
         </div>
 
