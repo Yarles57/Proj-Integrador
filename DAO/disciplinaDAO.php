@@ -14,9 +14,9 @@
 				$disciplina[$i] = new Disciplina;
 
 				$disciplina[$i]->setIdDisc($linhas[$i]['idDisciplina']);
-				$disciplina[$i]->setNomeDis($linhas[$i]['nomeDisciplina']);
+				$disciplina[$i]->setNomeDisc($linhas[$i]['nomeDisciplina']);
 				$disciplina[$i]->setSiglaDisc($linhas[$i]['siglaDisciplina']);
-				//$disciplina[$i]->setCursoDisc($linhas[$i]['']);
+				//$disciplina[$i]->setCursoDisc($linhas[$i]['idCursoFk']);
 
 			}	
 	  		return $disciplina;
