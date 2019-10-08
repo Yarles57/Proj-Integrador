@@ -59,4 +59,7 @@
             return $this->justificativaReserva = $justificativaReserva;
         }
 
+        public function Curso getIdCurso(){
+            
+        }
     }
