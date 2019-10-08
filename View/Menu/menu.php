@@ -160,9 +160,19 @@
           <li class="breadcrumb-item">
             <a href="dashboard.php">Painel de Controle </a>
           </li>
+      
+   <script>
+    $(function(){
+      $(".delete").on('click', function(e) {
+        e.preventDefault();
+        var delid = $(this).attr("delid");
 
-
-
+        if (confirm('Deseja deletar esse Professor')) {
+            window.location.replace("../indexProf.php?classe=professor&metodo=delete&id="+delid);
+        }
+      });
+    });
+  </script> 
 
      <!-- Bootstrap core JavaScript-->
   <script src="../vendor/jquery/jquery.min.js"></script>
@@ -186,3 +196,4 @@
    <!-- Custom mask input-->
    <script src="../js/demo/mask.js"> </script> 
   <script src="../js/demo/form.js"></script>
+
