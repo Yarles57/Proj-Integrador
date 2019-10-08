@@ -56,6 +56,7 @@
 			$nomeLaboratorio = $laboratorio->getNomeLab();
 			$codigoLaboratorio = $laboratorio->getCodLab();
 			$qtd = 	$laboratorio->getQtdComputadores();
+			
 			$query = "UPDATE tb_laboratorio SET nomeLab=?, codLab=?, qtdcompLab=? WHERE idLab=?";
     		$stmt = $pdo->prepare($query);
     		$stmt->bindParam(1, $nomeLaboratorio);
