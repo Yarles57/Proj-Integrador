@@ -8,6 +8,8 @@
   else{
     header("Location: ../indexCurso.php");
   }
+
+
 ?>
 
 <!DOCTYPE html>
