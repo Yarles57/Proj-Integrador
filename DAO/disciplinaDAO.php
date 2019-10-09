@@ -49,7 +49,6 @@
 
     		$ok = $stmt->execute();
 
-    		header("Location: View/listarDisc.php");
 		}
 
 		public function atualizar($disciplina){
@@ -68,7 +67,6 @@
     		$stmt->bindParam(4, $idDisciplina);
     		
     		$ok = $stmt->execute();
-    		// header("Location: View/listarLab.php");
 		}
 
 			public function deleta($id){
