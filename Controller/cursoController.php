@@ -14,6 +14,7 @@
 		public function index(){
 			$cursos = $this->cursoDAO->listarTudo();
 			session_start();
+			
 			$_SESSION['cursos'] = $cursos;
 
 			header('Location: View/listarCursos.php');
