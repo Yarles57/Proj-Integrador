@@ -54,12 +54,13 @@
 
 		public function atualizar($disciplina){
 			$pdo = Database::conexao();			
+
 			$idDisciplina = $disciplina->getIdDisc();
 			$nomeDisciplina = $disciplina->getNomeDisc();
 			$siglaDisciplina = $disciplina->getSiglaDisc();
 			$cursoDisciplina = $disciplina->getCursoDisc();
 			
-			$query = "UPDATE tb_disciplina SET nomeDisciplina=?, siglaDisciplina=?, idCursoFk=? WHERE idDisc=?";
+			$query = "UPDATE tb_disciplina SET nomeDisciplina=?, siglaDisciplina=?, idCursoFk=? WHERE idDisciplina=?";
     		$stmt = $pdo->prepare($query);
     		$stmt->bindParam(1, $nomeDisciplina);
     		$stmt->bindParam(2, $siglaDisciplina);
