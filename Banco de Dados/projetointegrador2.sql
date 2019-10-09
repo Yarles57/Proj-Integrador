@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Out-2019 às 01:51
+-- Generation Time: 09-Out-2019 às 18:09
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.4
 
@@ -40,7 +40,12 @@ CREATE TABLE `tb_curso` (
 
 INSERT INTO `tb_curso` (`idCurso`, `nomeCurso`, `siglaCurso`) VALUES
 (1, 'Bacharelado em Sistemas de Informação', 'BSI'),
-(2, 'Tecnólogo em Mecatrônica Industrial', 'MI');
+(2, 'Tecnólogo em Mecatrônica Industrial', 'MI'),
+(4, 'teste', 'TES'),
+(5, 'hsh', 'aaa'),
+(6, 'test', 'teste '),
+(7, 'Licenciatura em Matemática', 'LM'),
+(8, 'jaJA', 'AA');
 
 -- --------------------------------------------------------
 
@@ -52,8 +57,26 @@ CREATE TABLE `tb_disciplina` (
   `idCursoFk` int(3) UNSIGNED NOT NULL,
   `idDisciplina` int(3) UNSIGNED NOT NULL,
   `nomeDisciplina` varchar(50) NOT NULL,
-  `siglaDiciplina` varchar(6) NOT NULL
+  `siglaDisciplina` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `tb_disciplina`
+--
+
+INSERT INTO `tb_disciplina` (`idCursoFk`, `idDisciplina`, `nomeDisciplina`, `siglaDisciplina`) VALUES
+(1, 2, 'Programação', 'LLP'),
+(1, 4, 'hhs', 'jjdd'),
+(1, 6, 'Construção e Analise de Algoritmos', 'CAA'),
+(1, 7, 'Construção e Analise de Algoritmos', 'CAA'),
+(1, 8, 'Construção e Analise de Algoritmos', 'CAA'),
+(1, 9, 'Teste 1', 't1'),
+(2, 11, 'Corrente Continua', 'CC'),
+(2, 12, 'panorama', 'pa'),
+(2, 16, 'shha', 'klksdk'),
+(6, 17, 'asjdajs', 'kjsdja'),
+(7, 18, 'Fundamentos I', 'fundI'),
+(1, 19, 'jjsjs', 'jjd');
 
 -- --------------------------------------------------------
 
@@ -97,8 +120,15 @@ CREATE TABLE `tb_usuario` (
   `emailUsuario` varchar(30) NOT NULL,
   `senhaUsuario` varchar(16) NOT NULL,
   `nivelUsuario` tinyint(1) NOT NULL,
-  `telefoneUsusario` varchar(15) NOT NULL
+  `telefoneUsuario` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `tb_usuario`
+--
+
+INSERT INTO `tb_usuario` (`idUsuario`, `nomeUsuario`, `emailUsuario`, `senhaUsuario`, `nivelUsuario`, `telefoneUsuario`) VALUES
+(1, 'aqsad', 'asd@df', 'oHQHE', 1, 'SPOSP2');
 
 --
 -- Indexes for dumped tables
@@ -148,13 +178,13 @@ ALTER TABLE `tb_usuario`
 -- AUTO_INCREMENT for table `tb_curso`
 --
 ALTER TABLE `tb_curso`
-  MODIFY `idCurso` int(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idCurso` int(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tb_disciplina`
 --
 ALTER TABLE `tb_disciplina`
-  MODIFY `idDisciplina` int(3) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `idDisciplina` int(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `tb_laboratorio`
@@ -172,7 +202,7 @@ ALTER TABLE `tb_reserva`
 -- AUTO_INCREMENT for table `tb_usuario`
 --
 ALTER TABLE `tb_usuario`
-  MODIFY `idUsuario` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `idUsuario` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
