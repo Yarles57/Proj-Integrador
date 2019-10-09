@@ -59,6 +59,7 @@ require_once "DAO/disciplinaDAO.php";
 			$nomeDisciplina = $_POST['nomeDisciplina'];
 	        $siglaDisciplina = $_POST['siglaDisc'];
 	        $cursoDisciplina = $_POST['cursoDisc'];
+	        
 	        $this->disciplina->setIdDisc($idDisciplina);
 	        $this->disciplina->setNomeDisc($nomeDisciplina);
 	        $this->disciplina->setSiglaDisc($siglaDisciplina);
