@@ -7,7 +7,11 @@ require_once "Model/cursoModel.class.php";
         private $horaReserva;
         private $statusReserva;
         private $justificativaReserva;
-        private Curso $idCurso;
+
+        private $nomeUsuario;
+        private $nomeLab;
+        private $nomeDisc;
+
     
 
         public function getIdReserva()
